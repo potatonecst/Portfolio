@@ -7,6 +7,9 @@ import { TypographyH2, TypographyP } from "@/components/ui/typography";
 import { AutoplayCarousel } from "@/components/ui/autoplayCarousel";
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
 import { CarouselItem } from "@/components/ui/carousel";
+import { Button } from "@/components/ui/button";
+
+import { ExternalLink } from "lucide-react";
 
 export default function PortfolioPage() {
     return (
@@ -17,7 +20,21 @@ export default function PortfolioPage() {
                     自己紹介や成果物をまとめたポートフォリオサイトです。
                 </TypographyP>
             </div>
-            <AutoplayCarousel>
+
+            <div>
+                <div className="flex gap-4">
+                    <Link
+                        href="https://github.com/potatonecst/Portfolio"
+                        target="_blank"
+                        className="w-fit"
+                    >
+                        <Button variant="outline">
+                            GitHubリポジトリ<ExternalLink />
+                        </Button>
+                    </Link>
+                </div>
+            </div>
+            {/*<AutoplayCarousel>
                 <CarouselItem key="0" className="px-1">
                     <Card className="gap-0 py-0">
                         <CardContent className="flex aspect-video items-center justify-center relative">
@@ -63,7 +80,7 @@ export default function PortfolioPage() {
                         </CardDescription>
                     </Card>
                 </CarouselItem>
-            </AutoplayCarousel>
+            </AutoplayCarousel>*/}
         </div>
     )
 }
