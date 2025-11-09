@@ -1,0 +1,6 @@
+#publicフォルダ内の動画ファイルをLFSで管理する
+
+#標準的な動画ファイル
+public/**/*.mp4 filter=lfs diff=lfs merge=lfs -text
+public/**/*.mov filter=lfs diff=lfs merge=lfs -text
+public/**/*.webm filter=lfs diff=lfs merge=lfs -text
