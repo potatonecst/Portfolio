@@ -42,7 +42,7 @@ export default function WorksLayoutClient({
                         href={link.href}
                         key={link.title}
                         className={cn(
-                            "px-4 hover:bg-accent rounded-md", // 通常のスタイル
+                            "hover:bg-accent", // 通常のスタイル
                             pathname === link.href && "font-bold underline underline-offset-4 decoration-2 decoration-blue-700" // ⬅︎ アクティブ時のスタイル
                         )}
                         onClick={onLinkClick}
