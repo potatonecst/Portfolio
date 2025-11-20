@@ -17,19 +17,33 @@ export default function DataArrangerPage() {
             <div>
                 <TypographyH2>DataArranger_web</TypographyH2>
                 <TypographyP>
-                    数値シミュレーション結果を解析するためのWebアプリケーションです。
+                    数値シミュレーションの結果を解析するためのWebアプリケーションです。
+                </TypographyP>
+                <TypographyP>
+                    有限差分時間領域（FDTD）法を用いたシミュレーションの結果を、単純な数値計算の結果と合わせてグラフに表示します。
+                    データの選択をダイアログで行えるようにし、データを保存する際にもダイアログで名前や保存先を選択できます。
+                    アプリケーションを各端末にインストールせずとも、ブラウザから簡単に数値シミュレーション結果を確認できます。
                 </TypographyP>
             </div>
 
             <div>
-                <div className="flex gap-4">
+                <div className="flex flex-wrap gap-4">
+                    <Link
+                        href="https://data-arranger.potatonecst.com"
+                        target="_blank"
+                        className="w-fit"
+                    >
+                        <Button variant="outline">
+                            DataArranger_web (AWS)<ExternalLink />
+                        </Button>
+                    </Link>
                     <Link
                         href="https://data-arrangement-frontend.onrender.com"
                         target="_blank"
                         className="w-fit"
                     >
                         <Button variant="outline">
-                            DataArranger_web<ExternalLink />
+                            DataArranger_web (Render.com)<ExternalLink />
                         </Button>
                     </Link>
                     <Link
@@ -43,8 +57,20 @@ export default function DataArrangerPage() {
                     </Link>
                 </div>
                 <TypographyP>
-                    サーバーがスリープ状態の場合、起動に30秒から1分程度かかる場合があります。
+                    AWSにデプロイしているものと、Render.comにデプロイしているものは同じです。
+                    Render.comはhobbyプランで利用しているため、サーバーがスリープ状態の場合は起動に30秒から1分程度かかる場合があります。
                 </TypographyP>
+            </div>
+
+            <div>
+                <TypographyH3>機能</TypographyH3>
+                <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
+                    <li>シミュレーション結果を、実験での測定と比較可能な形でグラフ化（1/4波長板の角度に対する光強度のグラフ）</li>
+                    <li>シミュレーション結果の偏光状態を3Dグラフ化（Poincare球表示）</li>
+                    <li>グラフを画像として保存（png, svg, jpeg, webp形式）</li>
+                    <li>1/4波長板の角度に対する光強度のデータをjson形式で出力</li>
+                    <li>Stokesパラメータをjson形式で出力</li>
+                </ul>
             </div>
 
             <div className="space-y-2">
@@ -105,15 +131,39 @@ export default function DataArrangerPage() {
                     controls
                 />
                 <TypographyP>
-                    画面収録の際に、画面下部が切れてしまっています。後日、新しいものに差し替える予定です。
+                    画面収録の際に、画面下部が切れてしまっています。後日、新しいものに差し替える予定です。<br />
+                    映像は、Render.com版のものですので、サーバーが起動するまで時間がかかっています。<br />
+                    ※音声はありません。
                 </TypographyP>
             </div>
 
             <div>
                 <TypographyH3>開発</TypographyH3>
+
                 <TypographyP>
-                    使用言語:<br />Python（バックエンド）, TypeScript（フロントエンド）<br />
-                    使用ライブラリ等:<br />FastAPI, React, React Router
+                    <b>使用言語</b>:<br />Python（バックエンド）, TypeScript（フロントエンド）
+                </TypographyP>
+
+                <TypographyP>
+                    <b>使用ライブラリ等</b>:<br />NumPy, SciPy, Pandas, FastAPI, React, React Router, Plotly, shadcn/ui
+                </TypographyP>
+
+                <TypographyP>
+                    <b>使用サービス</b>:<br />Git, GitHub, Render.com, AWS Amplify, Amazon Elastic Container Registry, Amazon Elastic Compute Cloud, Amazon CloudFront, Amazon Route 53
+                </TypographyP>
+
+                <TypographyP>
+                    <b>開発経緯</b>:<br />
+                    アプリケーションを各端末にインストールせずとも簡単に数値シミュレーション結果を確認できるようにすること、
+                    Webフロントエンドでよく用いられているReactを習得すること、
+                    どうしても三次元グラフをうまく実装できなかったPySide6から脱却することの3つを目的として開発を始めました。
+                </TypographyP>
+
+                <TypographyP>
+                    <b>技術選定理由等</b>:<br />
+                    GitHubと接続することで自動で手軽にビルド・デプロイが行えるため、最初のデプロイ先にはRender.comを選びました。
+                    その後、広く用いられているAWSに触れる目的で、AWSでもデプロイしました。
+                    その際にRoute 53でカスタムドメインの取得・登録を行い、これを使用してurlをわかりやすくしました。
                 </TypographyP>
             </div>
         </div>

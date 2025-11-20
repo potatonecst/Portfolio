@@ -36,6 +36,11 @@ const works: {title: string, href: string, description: string}[] = [
         title: "Portfolio",
         href: PATHS.WORKS_PORTFOLIO,
         description: "このポートフォリオサイトの紹介です。"
+    },
+    {
+        title: "Others",
+        href: PATHS.WORKS_OTHERS,
+        description: "その他の成果物の紹介です。"
     }
 ]
 

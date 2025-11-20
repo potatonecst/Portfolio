@@ -15,9 +15,11 @@ import {
 import { TypographyH3, TypographyH4, TypographyP } from "../ui/typography"
 
 const worksLinks = [
+    {href: PATHS.WORKS, title: "成果物一覧"},
     {href: PATHS.WORKS_DATA_ARRANGER, title: "DataArranger_web"},
-    {href: PATHS.WORKS_GEOMETRIO, title: "GeomeTRIo"},
+    {href: PATHS.WORKS_GEOMETRIO, title: "GeomeTRIo (製作中)"},
     {href: PATHS.WORKS_PORTFOLIO, title: "Portfolio"},
+    {href: PATHS.WORKS_OTHERS, title: "Others"},
 ]
 
 interface SidebarNavProps {
@@ -42,8 +44,8 @@ export default function WorksLayoutClient({
                         href={link.href}
                         key={link.title}
                         className={cn(
-                            "hover:bg-accent", // 通常のスタイル
-                            pathname === link.href && "font-bold underline underline-offset-4 decoration-2 decoration-blue-700" // ⬅︎ アクティブ時のスタイル
+                            "rounded-md px-1 py-1 hover:bg-accent", //通常のスタイル
+                            pathname === link.href && "font-bold underline underline-offset-4 decoration-2 decoration-blue-700" //アクティブ時のスタイル
                         )}
                         onClick={onLinkClick}
                     >
@@ -74,9 +76,9 @@ export default function WorksLayoutClient({
                     onValueChange={setAccordionValue}
                 >
                     <AccordionItem value="item-1">
-                        <AccordionTrigger className="px-4 sm:px-8 hover:bg-accent rounded-none">
+                        <AccordionTrigger className="px-4 sm:px-8 hover:bg-accent rounded-none hover:no-underline">
                             <TypographyH4>
-                                成果物一覧
+                                成果物
                             </TypographyH4>
                         </AccordionTrigger>
                         <AccordionContent className="px-4 sm:px-8">
@@ -89,15 +91,15 @@ export default function WorksLayoutClient({
             {/*md以上*/}
             <aside
                 className={cn(
-                    "hidden md:block md:col-span-3 lg:col-span-2 mt-12",
+                    "hidden md:block md:col-span-3 mt-12",
                     "sticky top-8 max-h-[calc(100vh-4rem)] overflow-y-auto",
                 )}
             >
-                <TypographyH4 className="mb-2">成果物一覧</TypographyH4>
+                <TypographyH4 className="mb-2">成果物</TypographyH4>
                 <SidebarNav />
             </aside>
 
-            <div className="md:col-span-9 md:col-start-4 lg:col-span-10 lg:col-start-3 md:grid">
+            <div className="md:col-span-9 md:col-start-4 md:grid">
                 {children}
             </div>
         </div>

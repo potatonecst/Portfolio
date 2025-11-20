@@ -8,11 +8,9 @@ import { TypographyH2, TypographyH4, TypographyP } from "@/components/ui/typogra
 
 export default function WorksPage() {
     return (
-        <>
-            <div className="col-span-full">
-                <TypographyH2>成果物</TypographyH2>
-                <TypographyP>成果物ページです。</TypographyP>
-            </div>
+        <div className="space-y-8">
+            <TypographyH2>成果物一覧</TypographyH2>
+
             <ul className="grid md:grid-cols-2 gap-4">
                 <li>
                     <Link
@@ -89,8 +87,33 @@ export default function WorksPage() {
                         </Card>
                     </Link>
                 </li>
+                <li>
+                    <Link
+                        href={PATHS.WORKS_OTHERS}
+                        className="hover:opacity-60"
+                    >
+                        <Card className="gap-0 py-0">
+                            <CardContent className="flex aspect-video items-center justify-center relative">
+                                <Image
+                                    src="/DataArrangerWeb_lineChart.png"
+                                    alt="シミュレーション結果解析用アプリケーションの画面です。"
+                                    fill
+                                    className="object-cover rounded-t-xl"
+                                />
+                            </CardContent>
+                            <div className="p-2">
+                                <CardTitle>
+                                    <TypographyH4>Others</TypographyH4>
+                                </CardTitle>
+                                <CardDescription>
+                                    その他の成果物の紹介です。
+                                </CardDescription>
+                            </div>
+                        </Card>
+                    </Link>
+                </li>
             </ul>
             
-        </>
+        </div>
     )
 }

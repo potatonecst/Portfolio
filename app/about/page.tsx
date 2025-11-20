@@ -39,7 +39,7 @@ export default function AboutPage() {
                         散乱光の光路に素子を入れて光強度を測定すると、粒子の付着角度が推定できます。
                     </TypographyP>
                     <TypographyP>
-                        日本物理学会 第80回年次大会 発表（2025年9月18日）
+                        日本物理学会 第80回年次大会 口頭発表（2025年9月18日）
                     </TypographyP>
                 </div>
                 <div>
