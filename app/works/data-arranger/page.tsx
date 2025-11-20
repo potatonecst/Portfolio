@@ -73,12 +73,53 @@ export default function DataArrangerPage() {
                 </ul>
             </div>
 
+            <div>
+                <TypographyH3>動作環境</TypographyH3>
+                <table className="w-full">
+                    <thead className="[&>tr]:bg-accent [&>tr]:m-0 [&>tr]:border-t [&>tr]:p-0 [&>tr]:shadow-sm [&_th]:border [&_th]:px-4 [&_th]:py-2 [&_th]:text-left [&_th]:font-bold">
+                        <tr>
+                            <th>OS</th>
+                            <th>推奨条件</th>
+                        </tr>
+                    </thead>
+                    <tbody className="[&>tr]:even:bg-muted [&>tr]:m-0 [&>tr]:border-t [&>tr]:p-0 [&_td]:border [&_td]:px-4 [&_td]:py-2 [&_td]:text-left">
+                        <tr>
+                            <td>macOS</td>
+                            <td>
+                                <ul>
+                                    <li>Firefox 最新版</li>
+                                    <li>Google Chrome 最新版</li>
+                                    <li>Safari 最新版</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Windows</td>
+                            <td>Microsoft Edge 最新版</td>
+                        </tr>
+                        <tr>
+                            <td>iOS</td>
+                            <td>
+                                <ul>
+                                    <li>iPhone 8 以上</li>
+                                    <li>Safari 最新版</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>iPadOS</td>
+                            <td>Safari 最新版</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
             <div className="space-y-2">
                 <TypographyH3>Gallery</TypographyH3>
                 <AutoplayCarousel>
-                    <CarouselItem key="0" className="px-1">
+                    <CarouselItem key="0" className="px-1 min-w-0">
                         <Card className="gap-0 py-0">
-                            <CardContent className="flex aspect-video items-center justify-center relative">
+                            <CardContent className="w-full flex aspect-video items-center justify-center relative">
                                 <Image
                                     src="/DataArrangerWeb_lineChart.png"
                                     alt="シミュレーション結果解析用アプリケーションの画面です。"
@@ -91,9 +132,9 @@ export default function DataArrangerPage() {
                             </CardDescription>
                         </Card>
                     </CarouselItem>
-                    <CarouselItem key="1" className="px-1">
+                    <CarouselItem key="1" className="px-1 min-w-0">
                         <Card className="gap-0 py-0">
-                            <CardContent className="flex aspect-video items-center justify-center relative">
+                            <CardContent className="w-full flex aspect-video items-center justify-center relative">
                                 <Image
                                     src="/DataArrangerWeb_poincareChart.png"
                                     alt="シミュレーション結果解析用アプリケーションの画面です。3次元グラフが表示されています。"
@@ -106,9 +147,9 @@ export default function DataArrangerPage() {
                             </CardDescription>
                         </Card>
                     </CarouselItem>
-                    <CarouselItem key="2" className="px-1">
+                    <CarouselItem key="2" className="px-1 min-w-0">
                         <Card className="gap-0 py-0">
-                            <CardContent className="flex aspect-video items-center justify-center relative">
+                            <CardContent className="w-full flex aspect-video items-center justify-center relative">
                                 <Image
                                     src="/DataArrangerWeb_top.png"
                                     alt="シミュレーション結果解析用アプリケーションの画面です。アクセス時に表示される状態が表示されています。"

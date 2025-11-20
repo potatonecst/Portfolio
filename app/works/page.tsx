@@ -95,10 +95,12 @@ export default function WorksPage() {
                         <Card className="gap-0 py-0">
                             <CardContent className="flex aspect-video items-center justify-center relative">
                                 <Image
-                                    src="/DataArrangerWeb_lineChart.png"
+                                    src="/DataArrangerForFDTD_chart.png"
                                     alt="シミュレーション結果解析用アプリケーションの画面です。"
-                                    fill
-                                    className="object-cover rounded-t-xl"
+                                    width={0}
+                                    height={0}
+                                    sizes="100%"
+                                    className="object-cover h-full w-auto"
                                 />
                             </CardContent>
                             <div className="p-2">

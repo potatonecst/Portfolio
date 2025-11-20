@@ -17,7 +17,66 @@ export default function OthersPage() {
             <div>
                 <TypographyH2>Others</TypographyH2>
                 <TypographyP>
-                    そのほかの成果物を簡単に紹介します。
+                    その他の成果物を簡単に紹介します。
+                </TypographyP>
+            </div>
+
+            <TypographyH3 className="border-b pb-1">Data Analyzer</TypographyH3>
+
+            <div>
+                <TypographyP>
+                    散乱光の偏光状態測定の実験結果を解析するためのアプリケーションです。
+                    予め実験実施日とサンプル番号によってフォルダ分けされているデータを選択し、単純な理論計算結果とともにグラフを表示します。
+                    チェックボックスにチェックをつけることで光強度データの保存ができます。
+                    データ保存について、名前を変更することや保存場所を変更することはできません。また、実験結果のデータは所定のフォルダに、所定の名前で保存しておく必要があり、柔軟性がありません。
+                    現在、これらの問題点の改善を検討しています。
+                </TypographyP>
+            </div>
+
+            <div>
+                <div className="flex gap-4">
+                    <Link
+                        href="https://github.com/potatonecst/Polarization-Data-Analysis-Old"
+                        target="_blank"
+                        className="w-fit"
+                    >
+                        <Button variant="outline">
+                            GitHubリポジトリ<ExternalLink />
+                        </Button>
+                    </Link>
+                </div>
+            </div>
+
+            <div>
+                <TypographyH3>開発</TypographyH3>
+
+                <TypographyP>
+                    <b>使用言語</b>: Python
+                </TypographyP>
+
+                <TypographyP>
+                    <b>使用ライブラリ等</b>: NumPy, SciPy, PySide6
+                </TypographyP>
+
+                <TypographyP>
+                    <b>使用ツール</b>: PySide6-designer
+                </TypographyP>
+
+                <TypographyP>
+                    <b>使用サービス</b>: Git, GitHub
+                </TypographyP>
+
+                <TypographyP>
+                    <b>開発経緯</b>:<br />
+                    大学の研究において、実験結果の解析のために作成しました。
+                    ソースコードを直接書き換えて実験データの選択やパラメータの変更を行う手間を削減するためにGUIも作成しました。
+                </TypographyP>
+
+                <TypographyP>
+                    <b>技術選定理由等</b>:<br />
+                    研究室内での開発言語がPythonであったため、Pythonを用いて開発しました。
+                    GUIの作成には、比較的広く用いられているQtのPythonバインディングであるPySide6を利用しました。
+                    PySide6-designerでQtWidgetsを配置することで、複雑なコードを書くことなくGUIをデザインできました。
                 </TypographyP>
             </div>
 
@@ -55,7 +114,7 @@ export default function OthersPage() {
                 </TypographyP>
 
                 <TypographyP>
-                    <b>使用ライブラリ等</b>: NumPy, SciPy, Pandas, PySide6
+                    <b>使用ライブラリ等</b>: NumPy, SciPy, PySide6
                 </TypographyP>
 
                 <TypographyP>

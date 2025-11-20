@@ -99,7 +99,7 @@ export function Header() {
                             <NavigationMenuContent>
                                 <NavigationMenuLink asChild>
                                     <Link href={PATHS.WORKS}>
-                                        <TypographyH4>成果物</TypographyH4>
+                                        <TypographyH4>成果物一覧</TypographyH4>
                                     </Link>
                                 </NavigationMenuLink>
                                 <ul className="md:grid gap-2 sm:w-[400px] md:w-[500px] md:grid-cols-2 lg:w-[600px]">

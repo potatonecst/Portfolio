@@ -74,7 +74,7 @@ export default function GeometrioPage() {
                 <TypographyH3>操作方法（Version {currentVersion}時点）</TypographyH3>
                 <table className="w-full mt-2">
                     <thead>
-                        <tr className="even:bg-muted m-0 border-t p-0">
+                        <tr className="bg-accent m-0 border-t p-0 shadow-sm">
                             <th className="border px-4 py-2 text-left font-bold [[align=center]]:text-center [[align=right]]:text-right">
                                 アクション
                             </th>
@@ -115,9 +115,9 @@ export default function GeometrioPage() {
             <div className="space-y-2">
                 <TypographyH3>Gallery</TypographyH3>
                 <AutoplayCarousel>
-                    <CarouselItem key="0" className="px-1">
+                    <CarouselItem key="0" className="px-1 min-w-0">
                         <Card className="gap-0 py-0">
-                            <CardContent className="flex aspect-video items-center justify-center relative">
+                            <CardContent className="w-full flex aspect-video items-center justify-center relative">
                                 <Image
                                     src="/GeomeTRIo_playing1.png"
                                     alt="2Dシューティングゲームのゲーム画面です。"
@@ -130,9 +130,9 @@ export default function GeometrioPage() {
                             </CardDescription>
                         </Card>
                     </CarouselItem>
-                    <CarouselItem key="1" className="px-1">
+                    <CarouselItem key="1" className="px-1 min-w-0">
                         <Card className="gap-0 py-0">
-                            <CardContent className="flex aspect-video items-center justify-center relative">
+                            <CardContent className="w-full flex aspect-video items-center justify-center relative">
                                 <Image
                                     src="/GeomeTRIo_playing2.png"
                                     alt="2Dシューティングゲームのゲーム画面です。"
@@ -145,9 +145,9 @@ export default function GeometrioPage() {
                             </CardDescription>
                         </Card>
                     </CarouselItem>
-                    <CarouselItem key="2" className="px-1">
+                    <CarouselItem key="2" className="px-1 min-w-0">
                         <Card className="gap-0 py-0">
-                            <CardContent className="flex aspect-video items-center justify-center relative">
+                            <CardContent className="w-full flex aspect-video items-center justify-center relative">
                                 <Image
                                     src="/GeomeTRIo_title.png"
                                     alt="2Dシューティングゲームのタイトル画面です。"
@@ -160,9 +160,9 @@ export default function GeometrioPage() {
                             </CardDescription>
                         </Card>
                     </CarouselItem>
-                    <CarouselItem key="3" className="px-1">
+                    <CarouselItem key="3" className="px-1 min-w-0">
                         <Card className="gap-0 py-0">
-                            <CardContent className="flex aspect-video items-center justify-center relative">
+                            <CardContent className="w-full flex aspect-video items-center justify-center relative">
                                 <Image
                                     src="/GeomeTRIo_gameover.png"
                                     alt="2Dシューティングゲームのゲームオーバー画面です。"
@@ -175,9 +175,9 @@ export default function GeometrioPage() {
                             </CardDescription>
                         </Card>
                     </CarouselItem>
-                    <CarouselItem key="4" className="px-1">
+                    <CarouselItem key="4" className="px-1 min-w-0">
                         <Card className="gap-0 py-0">
-                            <CardContent className="flex aspect-video items-center justify-center relative">
+                            <CardContent className="w-full flex aspect-video items-center justify-center relative">
                                 <Image
                                     src="/GeomeTRIo_ranking.png"
                                     alt="2Dシューティングゲームのランキング画面です。"
