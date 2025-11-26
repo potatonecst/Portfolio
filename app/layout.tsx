@@ -16,8 +16,9 @@ import {
   NavigationMenuViewport,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
+import { Toaster } from "@/components/ui/sonner";
 
-import {Header} from "@/components/layout/header";
+import { Header } from "@/components/layout/header";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -36,6 +37,7 @@ export default function RootLayout({
           <Header />
           {children}
         </div>
+        <Toaster />
       </body>
     </html>
   );
