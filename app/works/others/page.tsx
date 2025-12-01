@@ -17,7 +17,7 @@ export default function OthersPage() {
             <div>
                 <TypographyH2>Others</TypographyH2>
                 <TypographyP>
-                    その他の成果物を簡単に紹介します。
+                    その他の成果物を紹介します。
                 </TypographyP>
             </div>
 
@@ -51,6 +51,10 @@ export default function OthersPage() {
                 <TypographyH3>開発</TypographyH3>
 
                 <TypographyP>
+                    <b>開発期間</b>: 2024年10月 - 2025年2月 （開発終了）
+                </TypographyP>
+
+                <TypographyP>
                     <b>使用言語</b>: Python
                 </TypographyP>
 
@@ -60,10 +64,6 @@ export default function OthersPage() {
 
                 <TypographyP>
                     <b>使用ツール</b>: PySide6-designer
-                </TypographyP>
-
-                <TypographyP>
-                    <b>使用サービス</b>: Git, GitHub
                 </TypographyP>
 
                 <TypographyP>
@@ -108,6 +108,10 @@ export default function OthersPage() {
 
             <div>
                 <TypographyH3>開発</TypographyH3>
+
+                <TypographyP>
+                    <b>開発期間</b>: 2025年5月25日 - 2025年7月14日 （開発終了）
+                </TypographyP>
 
                 <TypographyP>
                     <b>使用言語</b>: Python, QML

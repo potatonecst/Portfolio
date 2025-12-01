@@ -58,7 +58,7 @@ export default function DataArrangerPage() {
                 </div>
                 <TypographyP>
                     AWSにデプロイしているものと、Render.comにデプロイしているものは同じです。
-                    Render.comはhobbyプランで利用しているため、サーバーがスリープ状態の場合は起動に30秒から1分程度かかる場合があります。
+                    Render.comはHobbyプラン（フリープラン）で利用しているため、サーバーがスリープ状態の場合は起動に30秒から1分程度かかる場合があります。
                 </TypographyP>
             </div>
 
@@ -101,7 +101,6 @@ export default function DataArrangerPage() {
                             <td>iOS</td>
                             <td>
                                 <ul>
-                                    <li>iPhone 8 以上</li>
                                     <li>Safari 最新版</li>
                                 </ul>
                             </td>
@@ -112,6 +111,9 @@ export default function DataArrangerPage() {
                         </tr>
                     </tbody>
                 </table>
+                <ul className={`my-0 ml-4 list-["※"] [&>li]:mt-2`}>
+                    <li>Android OSでの動作確認はしていません。</li>
+                </ul>
             </div>
 
             <div className="space-y-2">
@@ -182,29 +184,36 @@ export default function DataArrangerPage() {
                 <TypographyH3>開発</TypographyH3>
 
                 <TypographyP>
+                    <b>開発期間</b>: 2025年7月20日 - 2025年11月17日 （運用中）
+                </TypographyP>
+
+                <TypographyP>
                     <b>使用言語</b>:<br />Python（バックエンド）, TypeScript（フロントエンド）
                 </TypographyP>
 
                 <TypographyP>
-                    <b>使用ライブラリ等</b>:<br />NumPy, SciPy, Pandas, FastAPI, React, React Router, Plotly, shadcn/ui
+                    <b>使用ライブラリ等</b>:<br />NumPy, SciPy, Pandas, FastAPI, React, React Router, React plotly.js, shadcn/ui
                 </TypographyP>
 
                 <TypographyP>
-                    <b>使用サービス</b>:<br />Git, GitHub, Render.com, AWS Amplify, Amazon Elastic Container Registry, Amazon Elastic Compute Cloud, Amazon CloudFront, Amazon Route 53
+                    <b>使用サービス</b>:<br />Git, GitHub, Docker, Render.com, AWS Amplify, Amazon Elastic Container Registry, Amazon Elastic Compute Cloud, Amazon CloudFront, Amazon Route 53
                 </TypographyP>
 
                 <TypographyP>
                     <b>開発経緯</b>:<br />
-                    アプリケーションを各端末にインストールせずとも簡単に数値シミュレーション結果を確認できるようにすること、
-                    Webフロントエンドでよく用いられているReactを習得すること、
-                    どうしても三次元グラフをうまく実装できなかったPySide6から脱却することの3つを目的として開発を始めました。
+                    以前、PySide6を用いて開発を行っていましたが、三次元グラフの実装において技術的な課題に直面しました。
+                    そこで、ライブラリが充実しており、参考になる技術情報も豊富なWeb技術を活用することで、この課題を解決できると考えWebアプリケーションへの移行を決意しました。
+                    また、Webアプリケーション化により端末ごとのインストールが不要で手軽にシミュレーション結果を確認できるなど利便性の向上も期待できました。
+                    本開発は、これらの課題解決に加え、Webフロントエンド開発において広く普及しているReactの習得も兼ねてスタートしました。
                 </TypographyP>
 
                 <TypographyP>
                     <b>技術選定理由等</b>:<br />
-                    GitHubと接続することで自動で手軽にビルド・デプロイが行えるため、最初のデプロイ先にはRender.comを選びました。
-                    その後、広く用いられているAWSに触れる目的で、AWSでもデプロイしました。
-                    その際にRoute 53でカスタムドメインの取得・登録を行い、これを使用してurlをわかりやすくしました。
+                    フロントエンドには、情報量が豊富で開発の知見が得やすいReact（TypeScript）を採用しました。
+                    アプリケーションの規模を考慮して大規模なフレームワークではなくReact Routerを採用し、UIコンポーネントには導入が容易かつ機能が充実しているshadcn/uiを使用しました。
+                    GitHub連携により、コードをプッシュするだけでビルドからデプロイまでが自動的に行われ、かつHobbyプランにより無料で運用開始できるため、最初のデプロイ先にはRender.comを選びました。
+                    その後、広く用いられているAWSを用いた開発経験を積む目的で、フロントエンドをAWS Amplifyで、バックエンドをAmazon ECR、Amazon EC2等で再構築しました。
+                    併せて、ポートフォリオサイトのためにAmazon Route 53で取得したカスタムドメインを利用して、URLをわかりやすいものにしました。
                 </TypographyP>
             </div>
         </div>
