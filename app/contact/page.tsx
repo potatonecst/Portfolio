@@ -46,6 +46,10 @@ export default function ContactPage() {
     } = useForm<FormData>({
         resolver: zodResolver(formSchema),
         mode: "onBlur", //入力欄から離れた時にチェック
+        defaultValues: {
+            email: "",
+            message: "",
+        }
     })
 
     const onSubmit = async (data: FormData) => {
@@ -91,7 +95,7 @@ export default function ContactPage() {
                                 <FieldLegend className="font-bold">お問い合わせフォーム</FieldLegend>
                                 <FieldDescription className="text-black">
                                     お問い合わせはこちらのフォームからお願いいたします。<br />
-                                    返答は contact@portfolio.potatonecst.com より行いますので、受信できるようにご設定ください。<br />
+                                    返答は portfolio@potatonecst.com より行いますので、受信できるようにご設定ください。<br />
                                     回答には時間を要します。ご了承ください。
                                 </FieldDescription>
                                 <FieldGroup>
