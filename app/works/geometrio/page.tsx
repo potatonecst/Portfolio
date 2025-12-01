@@ -17,7 +17,7 @@ export default function GeometrioPage() {
     return (
         <div className="space-y-8">
             <div>
-                <TypographyH2>GeomeTRIo（製作中）</TypographyH2>
+                <TypographyH2>GeomeTRIo</TypographyH2>
                 <TypographyP>
                     現在製作中のUnity製の2Dシューティングゲームです。
                 </TypographyP>
@@ -208,6 +208,10 @@ export default function GeometrioPage() {
 
             <div>
                 <TypographyH3>開発</TypographyH3>
+
+                <TypographyP>
+                    <b>開発期間</b>: 2025年9月6日 - 2025年11月9日 （一時開発休止中）
+                </TypographyP>
 
                 <TypographyP>
                     <b>使用言語</b>: C#

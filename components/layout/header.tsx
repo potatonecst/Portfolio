@@ -28,7 +28,7 @@ const works: {title: string, href: string, description: string}[] = [
         description: "シミュレーション結果解析用Webアプリケーションの紹介です。",
     },
     {
-        title: "GeomeTRIo（製作中）",
+        title: "GeomeTRIo",
         href: PATHS.WORKS_GEOMETRIO,
         description: "Unity製の2Dシューティングゲームの紹介です。"
     },

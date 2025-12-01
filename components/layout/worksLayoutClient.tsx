@@ -17,7 +17,7 @@ import { TypographyH3, TypographyH4, TypographyP } from "../ui/typography"
 const worksLinks = [
     {href: PATHS.WORKS, title: "成果物一覧"},
     {href: PATHS.WORKS_DATA_ARRANGER, title: "DataArranger_web"},
-    {href: PATHS.WORKS_GEOMETRIO, title: "GeomeTRIo (製作中)"},
+    {href: PATHS.WORKS_GEOMETRIO, title: "GeomeTRIo"},
     {href: PATHS.WORKS_PORTFOLIO, title: "Portfolio"},
     {href: PATHS.WORKS_OTHERS, title: "Others"},
 ]

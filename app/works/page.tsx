@@ -53,7 +53,7 @@ export default function WorksPage() {
                             </CardContent>
                             <div className="p-2">
                                 <CardTitle>
-                                    <TypographyH4>GeomeTRIo（製作中）</TypographyH4>
+                                    <TypographyH4>GeomeTRIo</TypographyH4>
                                 </CardTitle>
                                 <CardDescription>
                                     現在製作中のUnity製の2Dシューティングゲームの紹介です。
