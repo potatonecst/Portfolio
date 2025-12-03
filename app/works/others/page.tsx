@@ -106,6 +106,63 @@ export default function OthersPage() {
                 </div>
             </div>
 
+            <div className="space-y-2">
+                <TypographyH3>Gallery</TypographyH3>
+                <AutoplayCarousel>
+                    <CarouselItem key="0" className="px-1 min-w-0">
+                        <Card className="gap-0 py-0">
+                            <CardContent className="w-full flex aspect-video items-center justify-center relative">
+                                <Image
+                                    src="/DataArrangerForFDTD_chart.png"
+                                    alt="シミュレーション結果解析用アプリケーションの画面です。光強度のグラフが表示されています。"
+                                    width={0}
+                                    height={0}
+                                    sizes="100%"
+                                    className="object-cover h-full w-auto"
+                                />
+                            </CardContent>
+                            <CardDescription className="p-2">
+                                アプリケーションの画面です。光強度のグラフが表示されています。
+                            </CardDescription>
+                        </Card>
+                    </CarouselItem>
+                    <CarouselItem key="1" className="px-1 min-w-0">
+                        <Card className="gap-0 py-0">
+                            <CardContent className="w-full flex aspect-video items-center justify-center relative">
+                                <Image
+                                    src="/DataArrangerForFDTD_top.png"
+                                    alt="シミュレーション結果解析用アプリケーションの画面です。起動直後の状態が表示されています。"
+                                    width={0}
+                                    height={0}
+                                    sizes="100%"
+                                    className="object-cover h-full w-auto"
+                                />
+                            </CardContent>
+                            <CardDescription className="p-2">
+                                起動直後のアプリケーションの画面です。
+                            </CardDescription>
+                        </Card>
+                    </CarouselItem>
+                    <CarouselItem key="2" className="px-1 min-w-0">
+                        <Card className="gap-0 py-0">
+                            <CardContent className="w-full flex aspect-video items-center justify-center relative">
+                                <Image
+                                    src="/DataArrangerForFDTD_settings.png"
+                                    alt="シミュレーション結果解析用アプリケーションの画面です。設定ウインドウが表示されています。"
+                                    width={0}
+                                    height={0}
+                                    sizes="100%"
+                                    className="object-cover h-full w-auto"
+                                />
+                            </CardContent>
+                            <CardDescription className="p-2">
+                                アプリケーションの設定ウインドウです。
+                            </CardDescription>
+                        </Card>
+                    </CarouselItem>
+                </AutoplayCarousel>
+            </div>
+
             <div>
                 <TypographyH3>開発</TypographyH3>
 

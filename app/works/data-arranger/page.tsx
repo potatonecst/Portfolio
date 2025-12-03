@@ -124,7 +124,7 @@ export default function DataArrangerPage() {
                             <CardContent className="w-full flex aspect-video items-center justify-center relative">
                                 <Image
                                     src="/DataArrangerWeb_lineChart.png"
-                                    alt="シミュレーション結果解析用アプリケーションの画面です。"
+                                    alt="シミュレーション結果解析用アプリケーションの画面です。光強度のグラフが表示されています。"
                                     fill
                                     className="object-cover rounded-t-xl"
                                 />
@@ -154,13 +154,45 @@ export default function DataArrangerPage() {
                             <CardContent className="w-full flex aspect-video items-center justify-center relative">
                                 <Image
                                     src="/DataArrangerWeb_top.png"
-                                    alt="シミュレーション結果解析用アプリケーションの画面です。アクセス時に表示される状態が表示されています。"
+                                    alt="シミュレーション結果解析用アプリケーションの画面です。アクセス直後の状態が表示されています。"
                                     fill
                                     className="object-cover rounded-t-xl"
                                 />
                             </CardContent>
                             <CardDescription className="p-2">
-                                アプリケーションの画面です。アクセス時に表示される状態が表示されています。
+                                アクセス直後のアプリケーションの画面です。
+                            </CardDescription>
+                        </Card>
+                    </CarouselItem>
+                    <CarouselItem key="3" className="px-1 min-w-0">
+                        <Card className="gap-0 py-0">
+                            <CardContent className="w-full flex aspect-video items-center justify-center relative">
+                                <Image
+                                    src="/DataArrangerWeb_settings.png"
+                                    alt="シミュレーション結果解析用アプリケーションの画面です。設定画面が表示されています。"
+                                    fill
+                                    className="object-cover rounded-t-xl"
+                                />
+                            </CardContent>
+                            <CardDescription className="p-2">
+                                アプリケーションの設定画面です。
+                            </CardDescription>
+                        </Card>
+                    </CarouselItem>
+                    <CarouselItem key="4" className="px-1 min-w-0">
+                        <Card className="gap-0 py-0">
+                            <CardContent className="w-full flex aspect-video items-center justify-center relative">
+                                <Image
+                                    src="/DataArrangerWeb_spLineChart.jpg"
+                                    alt="シミュレーション結果解析用アプリケーションのスマートフォンでの画面です。光強度のグラフが表示されています。"
+                                    width={0}
+                                    height={0}
+                                    sizes="100%"
+                                    className="object-cover h-full w-auto"
+                                />
+                            </CardContent>
+                            <CardDescription className="p-2">
+                                スマートフォンでのアプリケーションの画面です。光強度のグラフが表示されています。
                             </CardDescription>
                         </Card>
                     </CarouselItem>
