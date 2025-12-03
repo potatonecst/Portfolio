@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { useForm } from "react-hook-form";
-import {zodResolver} from "@hookform/resolvers/zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
@@ -70,7 +70,7 @@ export default function ContactPage() {
             reset();
 
             toast.success(<b>送信完了</b>, {
-                description: "お問い合わせありがとうございます。送信完了メールをお送りしました。",
+                description: <p>お問い合わせありがとうございます。<br />送信完了メールをお送りしました。</p>,
             })
         } catch (error) {
             console.error(error);
@@ -94,9 +94,9 @@ export default function ContactPage() {
                             <FieldSet>
                                 <FieldLegend className="font-bold">お問い合わせフォーム</FieldLegend>
                                 <FieldDescription className="text-black">
-                                    お問い合わせはこちらのフォームからお願いいたします。<br />
-                                    返答は portfolio@potatonecst.com より行いますので、受信できるようにご設定ください。<br />
-                                    回答には時間を要します。ご了承ください。
+                                    こちらのフォームよりお問い合わせください。<br />
+                                    回答は <b>portfolio@potatonecst.com</b> よりお送りいたします。
+                                    回答までにお時間をいただく場合がございますが、あらかじめご了承ください。
                                 </FieldDescription>
                                 <FieldGroup>
                                     <Field data-invalid={!!errors.email}>

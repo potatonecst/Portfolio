@@ -12,6 +12,7 @@ import {
     Section,
     Hr,
     Link,
+    Font,
 } from "@react-email/components";
 
 interface ContactEmailProps {
@@ -22,28 +23,49 @@ interface ContactEmailProps {
 export const ContactEmail = ({ email, message }: ContactEmailProps) => {
     return (
         <Html>
-            <Head />
+            <Head>
+                <Font
+                    fontFamily="Geist"
+                    fallbackFontFamily="sans-serif"
+                    webFont={{
+                        url: "https://fonts.googleapis.com/css2?family=Geist:wght@800&display=swap",
+                        format: "woff2",
+                    }}
+                    fontWeight={800}
+                    fontStyle="normal"
+                />
+            </Head>
             <Preview>Portfolioからの通知です。</Preview>
             <Tailwind>
                 <Body className="bg-white my-auto mx-auto font-sans">
                     <Container className="border border-solid border-[#eaeaea] rounded my-10 mx-auto p-5 w-full max-w-lg">
-                        <Heading className="text-black text-xl font-bold text-center p-0 my-8 mx-0">
-                            お問い合わせありがとうございます。
+                        <Heading
+                        className="scroll-m-20 text-center text-4xl font-extrabold tracking-tight text-balance"
+                        style={{fontFamily: "Geist, sans-serif"}}
+                        >
+                            Portfolio
                         </Heading>
-                        <Text className="text-black text-lg leading-6">
+                        <Text className="text-black text-base font-bold text-center p-0 my-8 mx-0">
+                            お問い合わせありがとうございます。
+                        </Text>
+                        <Text className="text-black text-base leading-6">
                             以下の内容で受け付けました。確認次第ご連絡いたします。
                         </Text>
 
                         <Section className="bg-gray-100 p-4 rounded-md">
-                            <Text className="text-black text-lg leading-6 whitespace-pre-wrap">
-                                <b>メールアドレス</b>:<br />
+                            <Text className="text-black text-lg font-bold leading-6 whitespace-pre-wrap">
+                                <b>メールアドレス</b>
+                            </Text>
+                            <Text className="text-black text-base leading-6 whitespace-pre-wrap">
                                 {email}
                             </Text>
 
                             <Hr />
 
-                            <Text className="text-black text-lg leading-6 whitespace-pre-wrap">
-                                <b>問い合わせ内容</b>:<br />
+                            <Text className="text-black text-lg font-bold leading-6 whitespace-pre-wrap">
+                                問い合わせ内容
+                            </Text>
+                            <Text className="text-black text-base leading-6 whitespace-pre-wrap">
                                 {message}
                             </Text>
                         </Section>
