@@ -72,7 +72,7 @@ export default function GeometrioPage() {
 
             <div>
                 <TypographyH3>操作方法（Version {currentVersion}時点）</TypographyH3>
-                <table className="w-full mt-2">
+                <table className="w-full mt-4">
                     <thead>
                         <tr className="bg-accent m-0 border-t p-0 shadow-sm">
                             <th className="border px-4 py-2 text-left font-bold [[align=center]]:text-center [[align=right]]:text-right">
@@ -114,15 +114,15 @@ export default function GeometrioPage() {
 
             <div className="space-y-2">
                 <TypographyH3>Gallery</TypographyH3>
-                <AutoplayCarousel>
+                <AutoplayCarousel className="mt-4">
                     <CarouselItem key="0" className="px-1 min-w-0">
-                        <Card className="gap-0 py-0">
+                        <Card className="gap-0 py-0 shadow-none border-none rounded-none">
                             <CardContent className="w-full flex aspect-video items-center justify-center relative">
                                 <Image
                                     src="/GeomeTRIo_playing1.png"
                                     alt="2Dシューティングゲームのゲーム画面です。"
                                     fill
-                                    className="object-cover rounded-t-xl"
+                                    className="object-cover"
                                 />
                             </CardContent>
                             <CardDescription className="p-2">
@@ -131,13 +131,13 @@ export default function GeometrioPage() {
                         </Card>
                     </CarouselItem>
                     <CarouselItem key="1" className="px-1 min-w-0">
-                        <Card className="gap-0 py-0">
+                        <Card className="gap-0 py-0 shadow-none border-none rounded-none">
                             <CardContent className="w-full flex aspect-video items-center justify-center relative">
                                 <Image
                                     src="/GeomeTRIo_playing2.png"
                                     alt="2Dシューティングゲームのゲーム画面です。"
                                     fill
-                                    className="object-cover rounded-t-xl"
+                                    className="object-cover"
                                 />
                             </CardContent>
                             <CardDescription className="p-2">
@@ -146,13 +146,13 @@ export default function GeometrioPage() {
                         </Card>
                     </CarouselItem>
                     <CarouselItem key="2" className="px-1 min-w-0">
-                        <Card className="gap-0 py-0">
+                        <Card className="gap-0 py-0 shadow-none border-none rounded-none">
                             <CardContent className="w-full flex aspect-video items-center justify-center relative">
                                 <Image
                                     src="/GeomeTRIo_title.png"
                                     alt="2Dシューティングゲームのタイトル画面です。"
                                     fill
-                                    className="object-cover rounded-t-xl"
+                                    className="object-cover"
                                 />
                             </CardContent>
                             <CardDescription className="p-2">
@@ -161,13 +161,13 @@ export default function GeometrioPage() {
                         </Card>
                     </CarouselItem>
                     <CarouselItem key="3" className="px-1 min-w-0">
-                        <Card className="gap-0 py-0">
+                        <Card className="gap-0 py-0 shadow-none border-none rounded-none">
                             <CardContent className="w-full flex aspect-video items-center justify-center relative">
                                 <Image
                                     src="/GeomeTRIo_gameover.png"
                                     alt="2Dシューティングゲームのゲームオーバー画面です。"
                                     fill
-                                    className="object-cover rounded-t-xl"
+                                    className="object-cover"
                                 />
                             </CardContent>
                             <CardDescription className="p-2">
@@ -176,13 +176,13 @@ export default function GeometrioPage() {
                         </Card>
                     </CarouselItem>
                     <CarouselItem key="4" className="px-1 min-w-0">
-                        <Card className="gap-0 py-0">
+                        <Card className="gap-0 py-0 shadow-none border-none rounded-none">
                             <CardContent className="w-full flex aspect-video items-center justify-center relative">
                                 <Image
                                     src="/GeomeTRIo_ranking.png"
                                     alt="2Dシューティングゲームのランキング画面です。"
                                     fill
-                                    className="object-cover rounded-t-xl"
+                                    className="object-cover"
                                 />
                             </CardContent>
                             <CardDescription className="p-2">
@@ -198,6 +198,7 @@ export default function GeometrioPage() {
                 <video
                     src="/GeomeTRIo_demo.mp4"
                     controls
+                    className="mt-4"
                 />
                 <TypographyP>
                     最新バージョンの映像ではないため、現在のものとは一部異なる箇所があります。
@@ -218,11 +219,11 @@ export default function GeometrioPage() {
                 </TypographyP>
 
                 <TypographyP>
-                    <b>使用ツール</b>:<br />Unity（ゲームエンジン）, Logic Pro（BGM, 効果音制作）
+                    <b>使用ツール</b>:<br />Unity（ゲームエンジン）, Logic Pro（BGM, 効果音制作）, Git, Git LFS
                 </TypographyP>
 
                 <TypographyP>
-                    <b>使用サービス</b>: Git, Git LFS, GitHub
+                    <b>使用サービス</b>: GitHub
                 </TypographyP>
 
                 <TypographyP>

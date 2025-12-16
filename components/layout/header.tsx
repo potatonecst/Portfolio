@@ -8,20 +8,20 @@ import { cn } from "@/lib/utils";
 import { PATHS } from "@/lib/paths";
 
 import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-  navigationMenuTriggerStyle,
+    NavigationMenu,
+    NavigationMenuContent,
+    NavigationMenuIndicator,
+    NavigationMenuItem,
+    NavigationMenuLink,
+    NavigationMenuList,
+    NavigationMenuTrigger,
+    NavigationMenuViewport,
+    navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
-import {Separator} from "@/components/ui/separator"
+import { Separator } from "@/components/ui/separator"
 import { TypographyH1, TypographyH3, TypographyH4 } from "@/components/ui/typography";
 
-const works: {title: string, href: string, description: string}[] = [
+const works: { title: string, href: string, description: string }[] = [
     {
         title: "DataArranger_web",
         href: PATHS.WORKS_DATA_ARRANGER,
@@ -50,7 +50,7 @@ export function Header() {
     return (
         <header className="col-span-full md:grid md:grid-cols-12 md:gap-4">
             <TypographyH1 className="pb-4">
-                <Link href="/" className="md:col-span-3 md:col-start-1">
+                <Link href="/" className="md:col-span-3 md:col-start-1 px-4 rounded-md hover:bg-accent">
                     Portfolio
                 </Link>
             </TypographyH1>
@@ -61,7 +61,7 @@ export function Header() {
                             <NavigationMenuLink
                                 asChild
                                 className={cn(
-                                    navigationMenuTriggerStyle(), 
+                                    navigationMenuTriggerStyle(),
                                     "px-2 py-1 font-bold sm:text-xl sm:px-4 sm:py-2",
                                     pathname === PATHS.HOME && "font-bold text-accent-foreground underline underline-offset-3 decoration-2 decoration-blue-700"
                                 )}
@@ -76,7 +76,7 @@ export function Header() {
                             <NavigationMenuLink
                                 asChild
                                 className={cn(
-                                    navigationMenuTriggerStyle(), 
+                                    navigationMenuTriggerStyle(),
                                     "px-2 py-2 font-bold sm:text-xl sm:px-4 sm:py-2",
                                     pathname === PATHS.ABOUT && "font-bold text-accent-foreground underline underline-offset-3 decoration-2 decoration-blue-700"
                                 )}
@@ -105,9 +105,9 @@ export function Header() {
                                 <ul className="md:grid gap-2 sm:w-[400px] md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                                     {works.map((work) => (
                                         <ListItem
-                                        key={work.title}
-                                        title={work.title}
-                                        href={work.href}>
+                                            key={work.title}
+                                            title={work.title}
+                                            href={work.href}>
                                             {work.description}
                                         </ListItem>
                                     ))}
@@ -121,7 +121,7 @@ export function Header() {
                             <NavigationMenuLink
                                 asChild
                                 className={cn(
-                                    navigationMenuTriggerStyle(), 
+                                    navigationMenuTriggerStyle(),
                                     "px-2 py-2 font-bold sm:text-xl sm:px-4 sm:py-2",
                                     pathname === PATHS.CONTACT && "font-bold text-accent-foreground underline underline-offset-3 decoration-2 decoration-blue-700"
                                 )}
@@ -136,7 +136,7 @@ export function Header() {
     );
 }
 
-const ListItem = ({title, children, href, ...props}: React.ComponentPropsWithoutRef<"li"> & {href: string}) => {
+const ListItem = ({ title, children, href, ...props }: React.ComponentPropsWithoutRef<"li"> & { href: string }) => {
     return (
         <li {...props}>
             <NavigationMenuLink asChild>

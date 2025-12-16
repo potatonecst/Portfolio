@@ -63,7 +63,7 @@ export default function OthersPage() {
                 </TypographyP>
 
                 <TypographyP>
-                    <b>使用ツール</b>: PySide6-designer
+                    <b>使用ツール</b>: PySide6-designer, pyenv, pyenv-virtualenv, pip
                 </TypographyP>
 
                 <TypographyP>
@@ -108,9 +108,9 @@ export default function OthersPage() {
 
             <div className="space-y-2">
                 <TypographyH3>Gallery</TypographyH3>
-                <AutoplayCarousel>
+                <AutoplayCarousel className="mt-4">
                     <CarouselItem key="0" className="px-1 min-w-0">
-                        <Card className="gap-0 py-0">
+                        <Card className="gap-0 py-0 shadow-none border-none rounded-none">
                             <CardContent className="w-full flex aspect-video items-center justify-center relative">
                                 <Image
                                     src="/DataArrangerForFDTD_chart.png"
@@ -127,7 +127,7 @@ export default function OthersPage() {
                         </Card>
                     </CarouselItem>
                     <CarouselItem key="1" className="px-1 min-w-0">
-                        <Card className="gap-0 py-0">
+                        <Card className="gap-0 py-0 shadow-none border-none rounded-none">
                             <CardContent className="w-full flex aspect-video items-center justify-center relative">
                                 <Image
                                     src="/DataArrangerForFDTD_top.png"
@@ -144,7 +144,7 @@ export default function OthersPage() {
                         </Card>
                     </CarouselItem>
                     <CarouselItem key="2" className="px-1 min-w-0">
-                        <Card className="gap-0 py-0">
+                        <Card className="gap-0 py-0 shadow-none border-none rounded-none">
                             <CardContent className="w-full flex aspect-video items-center justify-center relative">
                                 <Image
                                     src="/DataArrangerForFDTD_settings.png"
@@ -179,11 +179,11 @@ export default function OthersPage() {
                 </TypographyP>
 
                 <TypographyP>
-                    <b>使用ツール</b>: Qt Design Studio
+                    <b>使用ツール</b>: Qt Design Studio, pyenv, pyenv-virtualenv, pip, Git
                 </TypographyP>
 
                 <TypographyP>
-                    <b>使用サービス</b>: Git, GitHub
+                    <b>使用サービス</b>: GitHub
                 </TypographyP>
 
                 <TypographyP>

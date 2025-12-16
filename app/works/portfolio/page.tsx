@@ -42,7 +42,7 @@ export default function PortfolioPage() {
 
             <div>
                 <TypographyH3>動作環境</TypographyH3>
-                <table className="w-full">
+                <table className="w-full mt-4">
                     <thead className="[&>tr]:bg-accent [&>tr]:m-0 [&>tr]:border-t [&>tr]:p-0 [&>tr]:shadow-sm [&_th]:border [&_th]:px-4 [&_th]:py-2 [&_th]:text-left [&_th]:font-bold">
                         <tr>
                             <th>OS</th>
@@ -90,7 +90,7 @@ export default function PortfolioPage() {
                 <TypographyH3>開発</TypographyH3>
 
                 <TypographyP>
-                    <b>開発期間</b>: 2025年11月1日 - （開発中）
+                    <b>開発期間</b>: 2025年11月1日 - 2025年12月16日 （運用中）
                 </TypographyP>
 
                 <TypographyP>
@@ -98,11 +98,15 @@ export default function PortfolioPage() {
                 </TypographyP>
 
                 <TypographyP>
-                    <b>使用ライブラリ等</b>: React, Next.js, shadcn/ui
+                    <b>使用ライブラリ等</b>: React, Next.js, zod, shadcn/ui
                 </TypographyP>
 
                 <TypographyP>
-                    <b>使用サービス</b>: Git, Git LFS, GitHub, AWS Amplify, Resend, Google Fonts
+                    <b>使用ツール</b>: npm, Git, Git LFS
+                </TypographyP>
+
+                <TypographyP>
+                    <b>使用サービス</b>: GitHub, AWS Amplify, Resend, さくらのメールボックス, Google Fonts
                 </TypographyP>
 
                 <TypographyP>

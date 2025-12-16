@@ -3,7 +3,7 @@
 import * as React from "react";
 
 import { Progress } from "@/components/ui/progress";
-import { 
+import {
     Carousel,
     CarouselContent,
     CarouselNext,
@@ -207,25 +207,25 @@ export const AutoplayCarousel = ({
                 </CarouselContent>
                 <div className="flex itens-center justify-between mt-2 gap-4 px-2">
                     <div className="flex gap-2 mt-4">
-                        <CarouselPrevious className="static h-8" onClick={handlePrevClick} />
-                        <CarouselNext className="static h-8" onClick={handleNextClick} />
+                        <CarouselPrevious className="static h-8 bg-blue-700/10 border-0 shadow-md hover:bg-blue-700/30" onClick={handlePrevClick} />
+                        <CarouselNext className="static h-8 bg-blue-700/10 border-0 shadow-md hover:bg-blue-700/30" onClick={handleNextClick} />
                     </div>
-                    <Progress value={progress} className="mt-4 h-1 transition-none w-1/3" />
+                    <Progress value={progress} className="mt-4 h-1 shadow-md transition-none w-1/3" />
                     <div className="flex justify-center gap-2 items-center -mt-3">
-                        {Array.from({length: count}).map((_, index) => (
+                        {Array.from({ length: count }).map((_, index) => (
                             <button
                                 key={index}
                                 onClick={() => handleDotClick(index)}
                                 className={cn(
                                     "h-2.5 w-2.5 rounded-full transition-all",
                                     current === index + 1
-                                        ? "bg-primary w-6"
-                                        : "bg-primary/30 hover:bg-primary/50"
+                                        ? "bg-blue-700 w-6"
+                                        : "bg-blue-700/20 hover:bg-blue-700/50"
                                 )}
                                 aria-label={`Go to slide ${index + 1}`}
                             />
                         ))}
-                    </div>  
+                    </div>
                 </div>
             </Carousel>
         </div>

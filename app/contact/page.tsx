@@ -6,7 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { 
+import {
     Field,
     FieldContent,
     FieldDescription,
@@ -27,11 +27,11 @@ import { toast } from "sonner";
 
 //バリデーションスキーマ
 const formSchema = z.object({
-    email: z.email({message: "メールアドレスの形式が正しくありません。"}) //形式チェック
-        .min(1, {message: "メールアドレスは必須です。"}), //必須チェック
+    email: z.email({ message: "メールアドレスの形式が正しくありません。" }) //形式チェック
+        .min(1, { message: "メールアドレスは必須です。" }), //必須チェック
     message: z.string()
-        .min(1, {message: "お問い合わせ内容は必須です。"}) //必須チェック
-        .max(1000, {message: "お問い合わせ内容は1000字以内で入力してください。"}), //最大字数チェック
+        .min(1, { message: "お問い合わせ内容は必須です。" }) //必須チェック
+        .max(1000, { message: "お問い合わせ内容は1000字以内で入力してください。" }), //最大字数チェック
 })
 
 //スキーマから型を生成
@@ -42,7 +42,7 @@ export default function ContactPage() {
         register,
         handleSubmit,
         reset,
-        formState: {errors, isSubmitting},
+        formState: { errors, isSubmitting },
     } = useForm<FormData>({
         resolver: zodResolver(formSchema),
         mode: "onBlur", //入力欄から離れた時にチェック

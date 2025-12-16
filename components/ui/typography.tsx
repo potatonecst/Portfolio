@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { cn } from "@/lib/utils"
 
-export const TypographyH1 = ({className, children, ...props}: React.ComponentPropsWithoutRef<"h1">) => {
+export const TypographyH1 = ({ className, children, ...props }: React.ComponentPropsWithoutRef<"h1">) => {
     return (
         <h1
             className={cn(
@@ -16,11 +16,11 @@ export const TypographyH1 = ({className, children, ...props}: React.ComponentPro
     )
 }
 
-export const TypographyH2 = ({className, children, ...props}: React.ComponentPropsWithoutRef<"h2">) => {
+export const TypographyH2 = ({ className, children, ...props }: React.ComponentPropsWithoutRef<"h2">) => {
     return (
         <h2
             className={cn(
-                "scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0",
+                "scroll-m-20 border-b border-blue-700 pb-2 text-3xl font-semibold tracking-tight first:mt-0",
                 className
             )}
             {...props}
@@ -30,11 +30,11 @@ export const TypographyH2 = ({className, children, ...props}: React.ComponentPro
     )
 }
 
-export const TypographyH3 = ({className, children, ...props}: React.ComponentPropsWithoutRef<"h3">) => {
+export const TypographyH3 = ({ className, children, ...props }: React.ComponentPropsWithoutRef<"h3">) => {
     return (
         <h3
             className={cn(
-                "scroll-m-20 text-2xl font-semibold tracking-tight",
+                "scroll-m-20 text-2xl font-semibold tracking-tight border-l-4 border-blue-700 pl-2",
                 className
             )}
             {...props}
@@ -44,7 +44,7 @@ export const TypographyH3 = ({className, children, ...props}: React.ComponentPro
     )
 }
 
-export const TypographyH4 = ({className, children, ...props}: React.ComponentPropsWithoutRef<"h4">) => {
+export const TypographyH4 = ({ className, children, ...props }: React.ComponentPropsWithoutRef<"h4">) => {
     return (
         <h4
             className={cn(
@@ -58,7 +58,7 @@ export const TypographyH4 = ({className, children, ...props}: React.ComponentPro
     )
 }
 
-export const TypographyP = ({className, children, ...props}: React.ComponentPropsWithoutRef<"p">) => {
+export const TypographyP = ({ className, children, ...props }: React.ComponentPropsWithoutRef<"p">) => {
     return (
         <p
             className={cn(
