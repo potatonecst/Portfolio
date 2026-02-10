@@ -2,7 +2,7 @@ import * as React from "react";
 //import Link from "next/link";
 
 import type { Metadata } from "next";
-import {notoSansJP, geistSans, geistMono} from "@/lib/fonts";
+import { notoSansJP, geistSans, geistMono } from "@/lib/fonts";
 import "./globals.css";
 
 import {
@@ -19,6 +19,7 @@ import {
 import { Toaster } from "@/components/ui/sonner";
 
 import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -31,11 +32,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="jp-JP" className={`${geistSans.variable} ${geistMono.variable} ${notoSansJP.variable} antialiased`}>
-      <body>
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 p-4 sm:p-8">
+    <html lang="ja-JP" className={`${geistSans.variable} ${geistMono.variable} ${notoSansJP.variable} antialiased`}>
+      <body className="flex flex-col min-h-screen">
+        <div className="grow grid grid-cols-1 md:grid-cols-12 gap-4 p-4 sm:p-8">
           <Header />
           {children}
+          <Footer />
         </div>
         <Toaster />
       </body>
