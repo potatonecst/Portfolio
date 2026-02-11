@@ -15,19 +15,18 @@ export function Footer() {
         : "---";
     console.log(`Build Date: ${formattedDate}`); // ビルド日時をコンソールに表示
     return (
-        <footer className="col-span-full mt-auto py-12 border-t border-gray-100">
+        <footer className="col-span-full mt-4 py-12 border-t border-gray-100">
             <div className="mx-auto px-4 flex flex-col items-center gap-3">
                 {/*SNSリンク*/}
                 <div className="flex gap-4 mb-2">
-                    <a
+                    <Link
                         href="https://github.com/potatonecst"
                         target="_blank"
-                        rel="noopener noreferrer"
                         className="text-grey-400 hover:text-blue-700 transition-colors"
                         aria-label="GitHub"
                     >
                         <GithubIcon className="size-6" />
-                    </a>
+                    </Link>
 
                     <Link
                         href={PATHS.CONTACT}

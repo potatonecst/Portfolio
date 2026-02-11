@@ -45,7 +45,7 @@ export default function WorksPage() {
                         <Card className="md:col-span-4 md:col-start-1 lg:col-span-5 gap-0 py-0 w-full">
                             <CardContent className="flex aspect-video items-center justify-center relative">
                                 <Image
-                                    src="/GeomeTRIo_playing1.png"
+                                    src="/GeomeTRIo/GeomeTRIo_playing1.png"
                                     alt="2Dシューティングゲームのゲーム画面です。"
                                     fill
                                     className="object-cover rounded-t-xl"
@@ -115,7 +115,7 @@ export default function WorksPage() {
                     </Link>
                 </li>
             </ul>
-            
+
         </div>
     )
 }

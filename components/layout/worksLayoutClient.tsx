@@ -7,23 +7,23 @@ import { PATHS } from "@/lib/paths"
 import { cn } from "@/lib/utils"
 
 import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
 } from "@/components/ui/accordion"
 import { TypographyH3, TypographyH4, TypographyP } from "../ui/typography"
 
 const worksLinks = [
-    {href: PATHS.WORKS, title: "成果物一覧"},
-    {href: PATHS.WORKS_DATA_ARRANGER, title: "DataArranger_web"},
-    {href: PATHS.WORKS_GEOMETRIO, title: "GeomeTRIo"},
-    {href: PATHS.WORKS_PORTFOLIO, title: "Portfolio"},
-    {href: PATHS.WORKS_OTHERS, title: "Others"},
+    { href: PATHS.WORKS, title: "成果物一覧" },
+    { href: PATHS.WORKS_DATA_ARRANGER, title: "DataArranger_web" },
+    { href: PATHS.WORKS_GEOMETRIO, title: "GeomeTRIo" },
+    { href: PATHS.WORKS_PORTFOLIO, title: "Portfolio" },
+    { href: PATHS.WORKS_OTHERS, title: "Others" },
 ]
 
 interface SidebarNavProps {
-  onLinkClick?: () => void; //リンククリック時に実行する関数
+    onLinkClick?: () => void; //リンククリック時に実行する関数
 }
 
 export default function WorksLayoutClient({
@@ -34,7 +34,7 @@ export default function WorksLayoutClient({
     const [accordionValue, setAccordionValue] = React.useState("");
 
     //サイドバーのナビゲーション（共通）
-    const SidebarNav = ({onLinkClick}: SidebarNavProps) => {
+    const SidebarNav = ({ onLinkClick }: SidebarNavProps) => {
         const pathname = usePathname();
 
         return (
@@ -95,7 +95,7 @@ export default function WorksLayoutClient({
                     "sticky top-8 max-h-[calc(100vh-4rem)] overflow-y-auto",
                 )}
             >
-                <TypographyH4 className="mb-2">成果物</TypographyH4>
+                <TypographyH4 className="mb-2 px-1">成果物</TypographyH4>
                 <SidebarNav />
             </aside>
 
