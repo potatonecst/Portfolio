@@ -42,6 +42,7 @@ export default function ContactPage() {
         register,
         handleSubmit,
         reset,
+        watch,
         formState: { errors, isSubmitting },
     } = useForm<FormData>({
         resolver: zodResolver(formSchema),
@@ -51,6 +52,9 @@ export default function ContactPage() {
             message: "",
         }
     })
+
+    const messageValue = watch("message") || "";
+    const characterCount = messageValue.length; //現在の文字数
 
     const onSubmit = async (data: FormData) => {
         try {
@@ -115,9 +119,14 @@ export default function ContactPage() {
                                         <FieldLabel htmlFor="inquiry-details">
                                             お問い合わせ内容
                                         </FieldLabel>
-                                        <FieldDescription>
-                                            1000文字以下で入力してください。
-                                        </FieldDescription>
+                                        <div className="flex w-full items-center justify-between">
+                                            <FieldDescription>
+                                                1000文字以下で入力してください。
+                                            </FieldDescription>
+                                            <span className={`text-xs text-end ${characterCount > 1000 ? "text-red-500 font-bold" : "text-muted-foreground"}`}>
+                                                現在の文字数: {characterCount}/1000
+                                            </span>
+                                        </div>
                                         <Textarea
                                             id="inquiry-details"
                                             placeholder="お問い合わせ内容を入力してください。"
