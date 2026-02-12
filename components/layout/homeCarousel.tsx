@@ -46,7 +46,7 @@ export const HomeCarousel = () => {
                     <Card className="gap-0 py-0 shadow-none border-none rounded-none">
                         <CardContent className="w-full flex aspect-video items-center justify-center relative">
                             <Image
-                                src="/GeomeTRIo/GeomeTRIo_playing1.png"
+                                src="/GeomeTRIo/GeomeTRIo_playing1_v0_3_0.png"
                                 alt="2Dシューティングゲームのゲーム画面です。"
                                 fill
                                 className="object-cover"

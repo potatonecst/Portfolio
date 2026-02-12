@@ -4,6 +4,7 @@ export const PATHS = {
     ABOUT: "/about",
     WORKS: "/works",
     CONTACT: "/contact",
+    LICENSES: "/licenses",
 
     //個々の成果物
     WORKS_DATA_ARRANGER: "/works/data-arranger",

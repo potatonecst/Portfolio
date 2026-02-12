@@ -107,7 +107,7 @@ export default function AboutPage() {
                                         主にReactを用いて開発しています。
                                     </TypographyP>
                                 </li>
-                                <li>Paiza（JavaScript）: Cランク （2026年2月）</li>
+                                <li>Paiza（JavaScript）: Bランク （2026年2月）</li>
                             </ul>
                         </li>
                         <li>

@@ -50,7 +50,7 @@ export function Header() {
     return (
         <header className="col-span-full md:grid md:grid-cols-12 md:gap-4">
             <TypographyH1 className="pb-4">
-                <Link href="/" className="md:col-span-3 md:col-start-1 px-4 rounded-md hover:bg-accent">
+                <Link href={PATHS.HOME} className="md:col-span-3 md:col-start-1 px-4 rounded-md hover:bg-accent">
                     Portfolio
                 </Link>
             </TypographyH1>
