@@ -336,8 +336,8 @@ export default function GeometrioPage() {
                 </TypographyP>
 
                 <TypographyP>
-                    <b>使用ツール</b>:<br />Unity（ゲームエンジン）, Logic Pro（BGM, 効果音制作）, Git, Git LFS, <br />
-                    [v0.3.0から] React Unity, React, Vite
+                    <b>使用ツール</b>:<br />Unity（ゲームエンジン）, Logic Pro（BGM, 効果音制作）, Git, Git LFS, Gemini Chat<br />
+                    [v0.3.0から] React Unity, React, Vite, Gemini Code Assist
                 </TypographyP>
 
                 <TypographyP>
@@ -346,7 +346,10 @@ export default function GeometrioPage() {
 
                 <TypographyP>
                     <b>開発経緯・技術選定理由</b>:<br />
-                    純粋なゲーム制作への興味から、Unityでのゲーム開発に挑戦しました。Unityを選んだのは、C#の学習になると同時に、マルチプラットフォーム開発の経験が今後のゲーム以外のソフトウェア開発全般にも役立つと考えたためです。
+                    純粋なゲーム制作への興味から、Unityでのゲーム開発に挑戦しました。
+                    Unityを選んだのは、C#の学習になると同時に、マルチプラットフォーム開発の経験が今後のゲーム以外のソフトウェア開発全般にも役立つと考えたためです。
+                    また、v0.3.0からは、ゲーム内のUIをReactで開発するためにReact Unityを導入しました。
+                    これにより、ReactでのUI開発の経験を積むとともに、ゲーム開発においてもモダンなフロントエンド技術を活用する機会を得ています。
                 </TypographyP>
             </div>
         </div >

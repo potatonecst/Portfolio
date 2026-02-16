@@ -18,7 +18,7 @@ export function Footer() {
     console.log(`Build Date: ${formattedDate}`); // ビルド日時をコンソールに表示
     return (
         <footer className="col-span-full mt-4 py-12 border-t border-gray-100">
-            <div className="mx-auto px-4 flex flex-col items-center gap-3">
+            <div className="mx-auto px-4 flex flex-col items-center gap-4">
                 {/*ナビゲーション*/}
                 <div className="flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-12 items-center">
                     <TypographyH1>
@@ -31,28 +31,28 @@ export function Footer() {
                         <Separator orientation="vertical" />
                     </div>
 
-                    <nav className="flex md:gap-4 lg:gap-8 items-center shrink-0">
+                    <nav className="flex flex-col sm:flex-row md:gap-4 lg:gap-8 items-center shrink-0">
                         <Link
                             href={PATHS.HOME}
-                            className="text-grey-400 px-4 py-1 rounded-md hover:bg-accent"
+                            className="text-grey-400 px-4 py-1 rounded-md hover:bg-accent text-nowrap"
                         >
                             Home
                         </Link>
                         <Link
                             href={PATHS.ABOUT}
-                            className="text-grey-400 px-4 py-1 rounded-md hover:bg-accent"
+                            className="text-grey-400 px-4 py-1 rounded-md hover:bg-accent text-nowrap"
                         >
                             自己紹介
                         </Link>
                         <Link
                             href={PATHS.WORKS}
-                            className="text-grey-400 px-4 py-1 rounded-md hover:bg-accent"
+                            className="text-grey-400 px-4 py-1 rounded-md hover:bg-accent text-nowrap"
                         >
                             成果物一覧
                         </Link>
                         <Link
                             href={PATHS.CONTACT}
-                            className="text-grey-400 px-4 py-1 rounded-md hover:bg-accent"
+                            className="text-grey-400 px-4 py-1 rounded-md hover:bg-accent text-nowrap"
                         >
                             お問い合わせ
                         </Link>
@@ -60,7 +60,7 @@ export function Footer() {
                 </div>
 
                 {/*SNSリンク*/}
-                <div className="flex gap-4 mb-2">
+                <div className="flex gap-4">
                     <Link
                         href="https://github.com/potatonecst"
                         target="_blank"
@@ -96,7 +96,7 @@ export function Footer() {
 
                     <div className="text-xs text-grey-500 font-light">
                         <Link href={PATHS.LICENSES} className="hover:bg-accent px-2 py-1 rounded">
-                            OSS Licenses
+                            OSSライセンス
                         </Link>
                     </div>
                 </div>

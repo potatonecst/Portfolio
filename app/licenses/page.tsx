@@ -35,9 +35,9 @@ export default function LicensesPage() {
     return (
         <div className="col-span-full md:grid md:grid-cols-12">
             <div className="md:col-span-10 md:col-start-2 space-y-8">
-                <TypographyH2>Licenses</TypographyH2>
+                <TypographyH2>OSSライセンス</TypographyH2>
                 <TypographyP>
-                    このサイトで使用されている主なオープンソースソフトウェアのライセンス情報を掲載しています。
+                    このサイトで使用されているオープンソースソフトウェアのライセンス情報を掲載しています。
                 </TypographyP>
 
                 <div className="grid gap-10">
