@@ -9,6 +9,12 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 
+const isHtml = (text: string) => {
+    if (!text) return false;
+    // メアドの < > ではなく、実際のHTMLタグ（br, div, p, a, span 等）が含まれているか判定
+    // \b は単語の境界を指すので、<luke... などのメアドには反応しなくなります
+    return /<(br|div|p|a|span|img|h[1-6])\b[^>]*>/i.test(text);
+}
 export default function LicensesPage() {
     const [licenses, setLicenses] = useState<Record<string, any> | null>(null);
 
@@ -42,7 +48,7 @@ export default function LicensesPage() {
 
                 <div className="grid gap-10">
                     {sortedLicenses.map(([name, detail]) => (
-                        <div key={name} className="border-b border-muted pb-8">
+                        <div key={name} className="border-b border-muted last:border-b-0 pb-8">
                             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
                                 <TypographyH3>{name}</TypographyH3>
                                 {detail.repository && (
@@ -64,9 +70,13 @@ export default function LicensesPage() {
                                     </span>
                                 )}
                                 <ScrollArea className="h-40 w-full rounded-md border mt-4 p-4 bg-muted/30">
-                                    <pre className="text-sm text-muted-foreground whitespace-pre-wrap break-all font-mono leading-relaxed">
-                                        {detail.licenseText}
-                                    </pre>
+                                    <div className="p-4">
+                                        <div
+                                            className={`text-sm text-muted-foreground break-all font-mono leading-relaxed ${isHtml(detail.licenseText) ? "whitespace-normal" : "whitespace-pre-wrap"
+                                                }`}
+                                            dangerouslySetInnerHTML={{ __html: detail.licenseText }}
+                                        />
+                                    </div>
                                 </ScrollArea>
                             </div>
                         </div>
