@@ -23,7 +23,7 @@ const worksLinks = [
 ]
 
 interface SidebarNavProps {
-    onLinkClick?: () => void; //リンククリック時に実行する関数
+    className?: () => void; //リンククリック時に実行する関数
 }
 
 export default function WorksLayoutClient({
@@ -34,24 +34,23 @@ export default function WorksLayoutClient({
     const [accordionValue, setAccordionValue] = React.useState("");
 
     //サイドバーのナビゲーション（共通）
-    const SidebarNav = ({ onLinkClick }: SidebarNavProps) => {
+    const SidebarNav = ({ className }: { className?: string }) => {
         const pathname = usePathname();
 
         return (
-            <nav className="flex flex-col gap-2">
+            <nav className={cn("flex", className)}>
                 {worksLinks.map((link) => (
                     <Link
                         href={link.href}
                         key={link.title}
                         className={cn(
-                            "rounded-md px-1 py-1 hover:bg-accent", //通常のスタイル
-                            pathname === link.href && "font-bold underline underline-offset-4 decoration-2 decoration-blue-700" //アクティブ時のスタイル
+                            "rounded-md px-1 py-1 text-primary/60 hover:text-primary hover:bg-accent shrink-0", //通常のスタイル
+                            pathname === link.href && "text-primary underline underline-offset-4 decoration-2 decoration-blue-700 shrink-0" //アクティブ時のスタイル
                         )}
-                        onClick={onLinkClick}
                     >
-                        <TypographyP className="text-wrap">
+                        <span className="text-sm">
                             {link.title}
-                        </TypographyP>
+                        </span>
                     </Link>
                 ))}
             </nav>
@@ -69,23 +68,12 @@ export default function WorksLayoutClient({
                     "-mx-4 sm:-mx-8",
                 )}
             >
-                <Accordion
-                    type="single"
-                    collapsible
-                    value={accordionValue}
-                    onValueChange={setAccordionValue}
-                >
-                    <AccordionItem value="item-1">
-                        <AccordionTrigger className="px-4 sm:px-8 hover:bg-accent rounded-none hover:no-underline">
-                            <TypographyH4>
-                                成果物
-                            </TypographyH4>
-                        </AccordionTrigger>
-                        <AccordionContent className="px-4 sm:px-8">
-                            <SidebarNav onLinkClick={() => setAccordionValue("")} />
-                        </AccordionContent>
-                    </AccordionItem>
-                </Accordion>
+                <div className="flex items-center px-4 sm:px-8 py-2">
+                    <span className="shrink-0 text-xs font-bold mr-2 border-r pr-2">
+                        成果物
+                    </span>
+                    <SidebarNav className="flex-row overflow-x-auto no-scrollbar gap-2 items-center" />
+                </div>
             </aside>
 
             {/*md以上*/}
@@ -96,7 +84,7 @@ export default function WorksLayoutClient({
                 )}
             >
                 <TypographyH4 className="mb-2 px-1">成果物</TypographyH4>
-                <SidebarNav />
+                <SidebarNav className="flex-col gap-1" />
             </aside>
 
             <div className="md:col-span-9 md:col-start-4 md:grid">

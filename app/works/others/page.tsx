@@ -8,6 +8,7 @@ import { AutoplayCarousel } from "@/components/ui/autoplayCarousel";
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
 import { CarouselItem } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 import { ExternalLink } from "lucide-react";
 
@@ -51,7 +52,7 @@ export default function OthersPage() {
                 <TypographyH3>開発</TypographyH3>
 
                 <TypographyP>
-                    <b>開発期間</b>: 2024年10月 - 2025年2月 （開発終了）
+                    <b>開発期間</b>: <Badge className="shadow-md">開発終了</Badge> 2024年10月 – 2025年2月
                 </TypographyP>
 
                 <TypographyP>
@@ -167,7 +168,7 @@ export default function OthersPage() {
                 <TypographyH3>開発</TypographyH3>
 
                 <TypographyP>
-                    <b>開発期間</b>: 2025年5月25日 - 2025年7月14日 （開発終了）
+                    <b>開発期間</b>: <Badge className="shadow-md">開発終了</Badge> 2025年5月25日 – 2025年7月14日
                 </TypographyP>
 
                 <TypographyP>

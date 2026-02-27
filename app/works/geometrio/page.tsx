@@ -8,11 +8,13 @@ import { AutoplayCarousel } from "@/components/ui/autoplayCarousel";
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
 import { CarouselItem } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 import { ExternalLink } from "lucide-react";
+import YouTubeEmbed from "@/components/ui/youtube-embed";
 
-const currentVersion = "0.2.1"
+const currentVersion = "0.3.0"
 
 const galleryItems_0_3_0 = [
     {
@@ -132,8 +134,9 @@ export default function GeometrioPage() {
                 <ul className={`list-disc ml-6 [&>li]:mt-2`}>
                     <li>mac_arm64（Apple silicon搭載Mac）</li>
                     <li>mac_Intel64（Intel Mac）</li>
-                    <li>win_Intel64（Windows）</li>
-                    <li className={`list-["※"]`}>Intel Mac版とWindows(Intel64)版は動作確認を行っていません。また、arm版Windows用のソフトウェアは現在リリースしていません。</li>
+                    <li>win_arm64（ARM版Windows）</li>
+                    <li>win_Intel64（その他のWindows）</li>
+                    <li className={`list-["※"]`}>Intel Mac版とWindows(arm64, Intel64)版は動作確認を行っていません。</li>
                 </ul>
             </div>
 
@@ -143,10 +146,10 @@ export default function GeometrioPage() {
                     <Accordion
                         type="single"
                         collapsible
-                        defaultValue="0"
+                        defaultValue="v0.3.0"
                         className="rounded-lg border"
                     >
-                        <AccordionItem key="0" value="0" className="px-4">
+                        <AccordionItem value="v0.3.0" className="px-4">
                             <AccordionTrigger className="text-lg">Version 0.3.0時点</AccordionTrigger>
                             <AccordionContent>
                                 <ul className="ml-6 list-disc [&>li]:mt-2 text-base">
@@ -156,35 +159,40 @@ export default function GeometrioPage() {
                                     </ul>
                                     <li>HPが尽きるとゲームオーバー</li>
                                     <li>SPを消費して、無敵状態で回転しながら3方向に弾を発射するスピンアタックを発動（ボムに相当）</li>
+                                    <ul className="ml-5 list-[circle] [&>li]:mt-2">
+                                        <li><Badge variant="outline" className="border-blue-700/50 shadow-sm">v0.3.0 –</Badge> スピンアタック時の弾は、敵へのダメージ量が増加が増加する</li>
+                                        <li><Badge variant="outline" className="border-blue-700/50 shadow-sm">v0.3.0 –</Badge> スピンアタック時に画面内の敵の弾を一掃する</li>
+                                    </ul>
                                     <li>HPは1から10、SPは0から10の間で設定可能（HPの初期値は3、SPの初期値は2）</li>
                                     <ul className="ml-5 list-[circle] [&>li]:mt-2">
-                                        <li>HPは一定スコア獲得で回復（回復量：1）</li>
-                                        <li>SPは敵に一定のダメージを与えたり、敵を撃破したりすることで増加するゲージを貯めると+1</li>
+                                        <li><Badge variant="outline" className="border-blue-700/50 shadow-sm">v0.3.0 –</Badge> HPは一定スコア獲得で回復（回復量：1）</li>
+                                        <li><Badge variant="outline" className="border-blue-700/50 shadow-sm">v0.3.0 –</Badge> SPは敵に一定のダメージを与えたり、敵を撃破したりすることで増加するゲージを貯めると+1</li>
                                     </ul>
-                                    <li>敵を倒すと、一定確率でパワーアップアイテムをドロップする</li>
+                                    <li><Badge variant="outline" className="border-blue-700/50 shadow-sm">v0.3.0 –</Badge> 敵を倒すと、一定確率でパワーアップアイテムをドロップする</li>
                                     <ul className="ml-5 list-[circle] [&>li]:mt-2">
                                         <li>パワーアップアイテムを規定数集めると、レベルが1つ上昇する</li>
                                         <li>パワーアップは、Lv.1 Normalから、Lv.10まである</li>
                                     </ul>
-                                    <li>パワーアップ効果例</li>
+                                    <li><Badge variant="outline" className="border-blue-700/50 shadow-sm">v0.3.0 –</Badge> パワーアップ効果例</li>
                                     <ul className="ml-5 list-[circle] [&>li]:mt-2">
                                         <li>連射スピードアップ（自動連射オフの場合、一度に発射される弾の数が増加）</li>
-                                        <li>弾の攻撃力が上昇（与ダメージの増加）</li>
+                                        <li>弾の攻撃力が上昇（敵へのダメージ量の増加）</li>
                                         <li>弾の発射範囲の拡大</li>
                                     </ul>
-                                    <li>各ステージごとに、各プレイ条件ごとに上位5つのスコアを記録し、ランキングを表示</li>
+                                    <li><Badge variant="outline" className="border-blue-700/50 shadow-sm">v0.3.0 –</Badge> 各ステージごとに、各プレイ条件ごとに上位5つのスコアを記録し、ランキングを表示</li>
                                     <ul className="ml-5 list-[circle] [&>li]:mt-2">
                                         <li>HP, SPの初期値、自動連射の有無などの組み合わせにおいて、それぞれ上位5つのスコアを記録</li>
                                     </ul>
-                                    <li>ゲームパッドを使用する場合、振動機能を使用可能（設定で変更可能）</li>
-                                    <li>セーブデータは1つだけ</li>
+                                    <li><Badge variant="outline" className="border-blue-700/50 shadow-sm">v0.3.0 –</Badge> ゲームパッドを使用する場合、振動機能を使用可能（設定で変更可能）</li>
+                                    <li><Badge variant="outline" className="border-blue-700/50 shadow-sm">v0.3.0 –</Badge> セーブデータは1つだけ</li>
                                     <ul className="ml-5 list-[circle] [&>li]:mt-2">
                                         <li>ゲームオーバー時やポーズ画面でメニューに戻る際に保存される</li>
+                                        <li>v0.3.0より前のセーブデータとの互換性はない</li>
                                     </ul>
                                 </ul>
                             </AccordionContent>
                         </AccordionItem>
-                        <AccordionItem key="1" value="1" className="px-4">
+                        <AccordionItem value="v0.2.1" className="px-4">
                             <AccordionTrigger className="text-lg">Version 0.2.1時点</AccordionTrigger>
                             <AccordionContent>
                                 <ul className="ml-6 list-disc [&>li]:mt-2 text-base">
@@ -254,10 +262,10 @@ export default function GeometrioPage() {
                     <Accordion
                         type="single"
                         collapsible
-                        defaultValue="0"
+                        defaultValue="v0.3.0"
                         className="rounded-lg border"
                     >
-                        <AccordionItem key="0" value="0" className="px-4">
+                        <AccordionItem value="v0.3.0" className="px-4">
                             <AccordionTrigger className="text-lg">Version 0.3.0</AccordionTrigger>
                             <AccordionContent>
                                 <AutoplayCarousel>
@@ -282,7 +290,7 @@ export default function GeometrioPage() {
                             </AccordionContent>
                         </AccordionItem>
 
-                        <AccordionItem key="1" value="1" className="px-4">
+                        <AccordionItem value="v0.2.1" className="px-4">
                             <AccordionTrigger className="text-lg">Version 0.2.1</AccordionTrigger>
                             <AccordionContent>
                                 <AutoplayCarousel>
@@ -312,32 +320,57 @@ export default function GeometrioPage() {
 
             <div className="space-y-2">
                 <TypographyH3>Movie</TypographyH3>
-                <video
-                    src="/GeomeTRIo/GeomeTRIo_demo.mp4"
-                    controls
-                    className="mt-4"
-                />
-                <TypographyP>
-                    最新バージョンの映像ではないため、現在のものとは一部異なる箇所があります。
-                    動画は適宜更新する予定です。<br />
-                    ※ゲーム音声が流れます。
-                </TypographyP>
+                <div className="mt-4">
+                    <Accordion
+                        type="single"
+                        collapsible
+                        defaultValue="v0.3.0"
+                        className="rounded-lg border"
+                    >
+                        <AccordionItem value="v0.3.0" className="px-4">
+                            <AccordionTrigger className="text-lg">Version 0.3.0</AccordionTrigger>
+                            <AccordionContent className="flex flex-col gap-4">
+                                <YouTubeEmbed
+                                    videoId="fhV3paNvJVk"
+                                    title="【DEMO】GeomeTRIo ver.0.3.0"
+                                />
+                                <div>
+                                    長い動画になっていますので、適宜再生速度を調整してご視聴ください。<br />
+                                    maOSのIntel-64 bit + Apple silicon版を使用して撮影しています。これは開発用であり、配布しているアプリケーションはIntel-64 bit版とApple silicon版に分かれています。<br />
+                                    ※ゲーム音声が流れます。
+                                </div>
+                            </AccordionContent>
+                        </AccordionItem>
+                        <AccordionItem value="v0.1.0" className="px-4">
+                            <AccordionTrigger className="text-lg">Version 0.1.0</AccordionTrigger>
+                            <AccordionContent className="flex flex-col gap-4">
+                                <YouTubeEmbed
+                                    videoId="CTE2g_Zlmbw"
+                                    title="【DEMO】Shooter2D（GeomeTRIo初期版）"
+                                />
+                                <div>
+                                    ※ゲーム音声が流れます。
+                                </div>
+                            </AccordionContent>
+                        </AccordionItem>
+                    </Accordion>
+                </div>
             </div>
 
             <div>
                 <TypographyH3>開発</TypographyH3>
 
                 <TypographyP>
-                    <b>開発期間</b>: 2025年9月6日 - 2025年11月9日（v0.2.1まで）、2026年1月15日 - （開発中）
+                    <b>開発期間</b>: <Badge className="shadow-sm">– v0.2.1</Badge> 2025年9月6日 – 2025年11月9日、<Badge className="bg-blue-700 shadow-sm">開発中: v0.3.0 –</Badge> 2026年1月15日 –
                 </TypographyP>
 
                 <TypographyP>
-                    <b>使用言語</b>: C#, [v0.3.0から] TypeScript
+                    <b>使用言語</b>: C#, <Badge variant="outline" className="border-blue-700/50 shadow-sm">v0.3.0 –</Badge> TypeScript
                 </TypographyP>
 
                 <TypographyP>
                     <b>使用ツール</b>:<br />Unity（ゲームエンジン）, Logic Pro（BGM, 効果音制作）, Git, Git LFS, Gemini Chat<br />
-                    [v0.3.0から] React Unity, React, Vite, Gemini Code Assist
+                    <Badge variant="outline" className="border-blue-700/50 shadow-sm">v0.3.0 –</Badge> React Unity, React, Vite, Gemini Code Assist
                 </TypographyP>
 
                 <TypographyP>

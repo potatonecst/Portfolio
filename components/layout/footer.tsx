@@ -4,6 +4,7 @@ import { GithubIcon } from "../icons/GithubIcon";
 import { Mail } from "lucide-react";
 import { TypographyH1 } from "../ui/typography";
 import { Separator } from "../ui/separator";
+import { YouTubeIcon } from "../icons/YouTubeIcon";
 
 export function Footer() {
     const buildDate = process.env.NEXT_PUBLIC_BUILD_DATE;
@@ -60,7 +61,7 @@ export function Footer() {
                 </div>
 
                 {/*SNSリンク*/}
-                <div className="flex gap-4">
+                <div className="flex gap-8">
                     <Link
                         href="https://github.com/potatonecst"
                         target="_blank"
@@ -68,6 +69,15 @@ export function Footer() {
                         aria-label="GitHub"
                     >
                         <GithubIcon className="size-6" />
+                    </Link>
+
+                    <Link
+                        href="https://www.youtube.com/channel/UC4uSONFouAMdVGWbdhCzzvQ"
+                        target="_blank"
+                        className="text-[#212121] hover:text-[#ff0033] transition-colors"
+                        aria-label="YouTube"
+                    >
+                        <YouTubeIcon className="size-6" />
                     </Link>
 
                     <Link
@@ -95,7 +105,7 @@ export function Footer() {
                     </div>
 
                     <div className="text-xs text-grey-500 font-light">
-                        <Link href={PATHS.LICENSES} className="hover:bg-accent px-2 py-1 rounded">
+                        <Link href={PATHS.LICENSES} className="hover:bg-accent px-2 py-1 rounded-md">
                             OSSライセンス
                         </Link>
                     </div>

@@ -8,8 +8,10 @@ import { AutoplayCarousel } from "@/components/ui/autoplayCarousel";
 import { Card, CardContent, CardDescription } from "@/components/ui/card";
 import { CarouselItem } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 import { ExternalLink } from 'lucide-react';
+import YouTubeEmbed from "@/components/ui/youtube-embed";
 
 export default function DataArrangerPage() {
     return (
@@ -201,14 +203,13 @@ export default function DataArrangerPage() {
 
             <div className="space-y-2">
                 <TypographyH3>Movie</TypographyH3>
-                <video
-                    src="/DataArrangerWeb_demo.mp4"
-                    controls
-                    className="mt-4"
+                <YouTubeEmbed
+                    videoId="Gvstti9IUZo"
+                    title="【DEMO】DataArranger_Web（Render.com版）"
                 />
                 <TypographyP>
                     画面収録の際に、画面下部が切れてしまっています。後日、新しいものに差し替える予定です。<br />
-                    映像は、Render.com版のものですので、サーバーが起動するまで時間がかかっています。<br />
+                    映像は、Render.com版のものですので、サーバーが起動するまで時間がかかっています。1:16で起動が完了します。<br />
                     ※音声はありません。
                 </TypographyP>
             </div>
@@ -217,7 +218,7 @@ export default function DataArrangerPage() {
                 <TypographyH3>開発</TypographyH3>
 
                 <TypographyP>
-                    <b>開発期間</b>: 2025年7月20日 - 2025年11月17日 （運用中）
+                    <b>開発期間</b>: <Badge className="shadow-md">運用中</Badge> 2025年7月20日 – 2025年11月17日
                 </TypographyP>
 
                 <TypographyP>

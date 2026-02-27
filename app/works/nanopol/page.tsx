@@ -8,6 +8,7 @@ import { AutoplayCarousel } from "@/components/ui/autoplayCarousel";
 import { Card, CardContent, CardDescription } from "@/components/ui/card";
 import { CarouselItem } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 
 import { ExternalLink } from 'lucide-react';
 
@@ -177,7 +178,7 @@ export default function NanoPolPage() {
                 <TypographyH3>開発</TypographyH3>
 
                 <TypographyP>
-                    <b>開発期間</b>: 2025年12月4日 - （運用中）
+                    <b>開発期間</b>: <Badge>開発中</Badge> 2025年12月4日 –
                 </TypographyP>
 
                 <TypographyP>
