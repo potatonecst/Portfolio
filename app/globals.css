@@ -41,7 +41,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  }
+}
 
 :root {
   --radius: 0.625rem;
@@ -116,7 +116,13 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* 英語のみ等幅、日本語は通常 */
+@theme {
+  --font-mono-only-en: var(--font-geist-mono), var(--font-noto-sans-jp), monospace;
 }

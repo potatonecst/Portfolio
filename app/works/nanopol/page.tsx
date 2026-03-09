@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 import { ExternalLink } from 'lucide-react';
+import { BadgeForWorks } from "@/components/ui/badgeForWorks";
 
 export default function NanoPolPage() {
     return (
@@ -203,7 +204,7 @@ export default function NanoPolPage() {
                 <TypographyH3>開発</TypographyH3>
 
                 <TypographyP>
-                    <b>開発期間</b>: <Badge className="shadow-sm">開発中</Badge> 2025年12月4日 –
+                    <b>開発期間</b>: <BadgeForWorks mode="developing">開発中</BadgeForWorks> 2025年12月4日 –
                 </TypographyP>
 
                 <TypographyP>

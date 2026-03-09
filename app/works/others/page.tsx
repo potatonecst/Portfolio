@@ -9,6 +9,7 @@ import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/c
 import { CarouselItem } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { BadgeForWorks } from "@/components/ui/badgeForWorks";
 
 import { ExternalLink } from "lucide-react";
 
@@ -52,7 +53,7 @@ export default function OthersPage() {
                 <TypographyH3>開発</TypographyH3>
 
                 <TypographyP>
-                    <b>開発期間</b>: <Badge className="shadow-md">開発終了</Badge> 2024年10月 – 2025年2月
+                    <b>開発期間</b>: <BadgeForWorks mode="default">開発終了</BadgeForWorks> 2024年10月 – 2025年2月
                 </TypographyP>
 
                 <TypographyP>
@@ -168,7 +169,7 @@ export default function OthersPage() {
                 <TypographyH3>開発</TypographyH3>
 
                 <TypographyP>
-                    <b>開発期間</b>: <Badge className="shadow-md">開発終了</Badge> 2025年5月25日 – 2025年7月14日
+                    <b>開発期間</b>: <BadgeForWorks mode="default">開発終了</BadgeForWorks> 2025年5月25日 – 2025年7月14日
                 </TypographyP>
 
                 <TypographyP>

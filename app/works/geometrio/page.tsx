@@ -9,6 +9,7 @@ import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/c
 import { CarouselItem } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { BadgeForWorks } from "@/components/ui/badgeForWorks";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 import { ExternalLink } from "lucide-react";
@@ -146,9 +147,56 @@ export default function GeometrioPage() {
                     <Accordion
                         type="single"
                         collapsible
-                        defaultValue="v0.3.0"
+                        defaultValue="v0.4.0"
                         className="rounded-lg border"
                     >
+                        <AccordionItem value="v0.4.0" className="px-4">
+                            <AccordionTrigger className="text-lg">Version 0.4.0時点</AccordionTrigger>
+                            <AccordionContent>
+                                <ul className="ml-6 list-disc [&>li]:mt-2 text-base">
+                                    <li>正三角形の前方、左斜め後方、右斜め後方の3箇所の頂点が弾の発射口</li>
+                                    <ul className="ml-5 list-[circle] [&>li]:mt-2">
+                                        <li>発射口を左右に切り替えながらプレイ</li>
+                                    </ul>
+                                    <li>HPが尽きるとゲームオーバー</li>
+                                    <li>SPを消費して、無敵状態で回転しながら3方向に弾を発射するスピンアタックを発動（ボムに相当）</li>
+                                    <ul className="ml-5 list-[circle] [&>li]:mt-2">
+                                        <li><BadgeForWorks mode="old">v0.3.0 –</BadgeForWorks> スピンアタック時の弾は、敵へのダメージ量が増加が増加する</li>
+                                        <li><BadgeForWorks mode="old">v0.3.0 –</BadgeForWorks> スピンアタック時に画面内の敵の弾を一掃する</li>
+                                    </ul>
+                                    <li>HPは1から10、SPは0から10の間で設定可能（HPの初期値は3、SPの初期値は2）</li>
+                                    <ul className="ml-5 list-[circle] [&>li]:mt-2">
+                                        <li><BadgeForWorks mode="old">v0.3.0 –</BadgeForWorks> HPは一定スコア獲得で回復（回復量：1）</li>
+                                        <li><BadgeForWorks mode="old">v0.3.0 –</BadgeForWorks> SPは敵に一定のダメージを与えたり、敵を撃破したりすることで増加するゲージを貯めると+1</li>
+                                    </ul>
+                                    <li><BadgeForWorks mode="old">v0.3.0 –</BadgeForWorks> 敵を倒すと、一定確率でパワーアップアイテムをドロップする</li>
+                                    <ul className="ml-5 list-[circle] [&>li]:mt-2">
+                                        <li>パワーアップアイテムを規定数集めると、レベルが1つ上昇する</li>
+                                        <li>パワーアップは、Lv.1 Normalから、Lv.10まである</li>
+                                    </ul>
+                                    <li><BadgeForWorks mode="old">v0.3.0 –</BadgeForWorks> パワーアップ効果例</li>
+                                    <ul className="ml-5 list-[circle] [&>li]:mt-2">
+                                        <li>連射スピードアップ（自動連射オフの場合、一度に発射される弾の数が増加）</li>
+                                        <li>弾の攻撃力が上昇（敵へのダメージ量の増加）</li>
+                                        <li>弾の発射範囲の拡大</li>
+                                    </ul>
+                                    <li><BadgeForWorks mode="old">v0.3.0 –</BadgeForWorks> 各ステージごとに、各プレイ条件ごとに上位5つのスコアを記録し、ランキングを表示</li>
+                                    <ul className="ml-5 list-[circle] [&>li]:mt-2">
+                                        <li>HP, SPの初期値、自動連射の有無などの組み合わせにおいて、それぞれ上位5つのスコアを記録</li>
+                                    </ul>
+                                    <li><BadgeForWorks mode="old">v0.3.0 –</BadgeForWorks> ゲームパッドを使用する場合、振動機能を使用可能（設定で変更可能）</li>
+                                    <li><BadgeForWorks mode="old">v0.3.0 –</BadgeForWorks> セーブデータは1つだけ</li>
+                                    <ul className="ml-5 list-[circle] [&>li]:mt-2">
+                                        <li>ゲームオーバー時やポーズ画面でメニューに戻る際に保存される</li>
+                                        <li>v0.3.0より前のセーブデータとの互換性はない</li>
+                                    </ul>
+                                    <li><BadgeForWorks mode="new">v0.4.0 –</BadgeForWorks> クラウドセーブ機能を追加</li>
+                                    <ul className="ml-5 list-[circle] [&>li]:mt-2">
+                                        <li>クラウドセーブのみになり、ローカル端末にセーブデータを保存することはできない（オフラインでもプレイは可能であるが、保存はできない）</li>
+                                    </ul>
+                                </ul>
+                            </AccordionContent>
+                        </AccordionItem>
                         <AccordionItem value="v0.3.0" className="px-4">
                             <AccordionTrigger className="text-lg">Version 0.3.0時点</AccordionTrigger>
                             <AccordionContent>
@@ -160,31 +208,31 @@ export default function GeometrioPage() {
                                     <li>HPが尽きるとゲームオーバー</li>
                                     <li>SPを消費して、無敵状態で回転しながら3方向に弾を発射するスピンアタックを発動（ボムに相当）</li>
                                     <ul className="ml-5 list-[circle] [&>li]:mt-2">
-                                        <li><Badge variant="outline" className="border-blue-700/50 shadow-sm">v0.3.0 –</Badge> スピンアタック時の弾は、敵へのダメージ量が増加が増加する</li>
-                                        <li><Badge variant="outline" className="border-blue-700/50 shadow-sm">v0.3.0 –</Badge> スピンアタック時に画面内の敵の弾を一掃する</li>
+                                        <li><BadgeForWorks mode="new">v0.3.0 –</BadgeForWorks> スピンアタック時の弾は、敵へのダメージ量が増加が増加する</li>
+                                        <li><BadgeForWorks mode="new">v0.3.0 –</BadgeForWorks> スピンアタック時に画面内の敵の弾を一掃する</li>
                                     </ul>
                                     <li>HPは1から10、SPは0から10の間で設定可能（HPの初期値は3、SPの初期値は2）</li>
                                     <ul className="ml-5 list-[circle] [&>li]:mt-2">
-                                        <li><Badge variant="outline" className="border-blue-700/50 shadow-sm">v0.3.0 –</Badge> HPは一定スコア獲得で回復（回復量：1）</li>
-                                        <li><Badge variant="outline" className="border-blue-700/50 shadow-sm">v0.3.0 –</Badge> SPは敵に一定のダメージを与えたり、敵を撃破したりすることで増加するゲージを貯めると+1</li>
+                                        <li><BadgeForWorks mode="new">v0.3.0 –</BadgeForWorks> HPは一定スコア獲得で回復（回復量：1）</li>
+                                        <li><BadgeForWorks mode="new">v0.3.0 –</BadgeForWorks> SPは敵に一定のダメージを与えたり、敵を撃破したりすることで増加するゲージを貯めると+1</li>
                                     </ul>
-                                    <li><Badge variant="outline" className="border-blue-700/50 shadow-sm">v0.3.0 –</Badge> 敵を倒すと、一定確率でパワーアップアイテムをドロップする</li>
+                                    <li><BadgeForWorks mode="new">v0.3.0 –</BadgeForWorks> 敵を倒すと、一定確率でパワーアップアイテムをドロップする</li>
                                     <ul className="ml-5 list-[circle] [&>li]:mt-2">
                                         <li>パワーアップアイテムを規定数集めると、レベルが1つ上昇する</li>
                                         <li>パワーアップは、Lv.1 Normalから、Lv.10まである</li>
                                     </ul>
-                                    <li><Badge variant="outline" className="border-blue-700/50 shadow-sm">v0.3.0 –</Badge> パワーアップ効果例</li>
+                                    <li><BadgeForWorks mode="new">v0.3.0 –</BadgeForWorks> パワーアップ効果例</li>
                                     <ul className="ml-5 list-[circle] [&>li]:mt-2">
                                         <li>連射スピードアップ（自動連射オフの場合、一度に発射される弾の数が増加）</li>
                                         <li>弾の攻撃力が上昇（敵へのダメージ量の増加）</li>
                                         <li>弾の発射範囲の拡大</li>
                                     </ul>
-                                    <li><Badge variant="outline" className="border-blue-700/50 shadow-sm">v0.3.0 –</Badge> 各ステージごとに、各プレイ条件ごとに上位5つのスコアを記録し、ランキングを表示</li>
+                                    <li><BadgeForWorks mode="new">v0.3.0 –</BadgeForWorks> 各ステージごとに、各プレイ条件ごとに上位5つのスコアを記録し、ランキングを表示</li>
                                     <ul className="ml-5 list-[circle] [&>li]:mt-2">
                                         <li>HP, SPの初期値、自動連射の有無などの組み合わせにおいて、それぞれ上位5つのスコアを記録</li>
                                     </ul>
-                                    <li><Badge variant="outline" className="border-blue-700/50 shadow-sm">v0.3.0 –</Badge> ゲームパッドを使用する場合、振動機能を使用可能（設定で変更可能）</li>
-                                    <li><Badge variant="outline" className="border-blue-700/50 shadow-sm">v0.3.0 –</Badge> セーブデータは1つだけ</li>
+                                    <li><BadgeForWorks mode="new">v0.3.0 –</BadgeForWorks> ゲームパッドを使用する場合、振動機能を使用可能（設定で変更可能）</li>
+                                    <li><BadgeForWorks mode="new">v0.3.0 –</BadgeForWorks> セーブデータは1つだけ</li>
                                     <ul className="ml-5 list-[circle] [&>li]:mt-2">
                                         <li>ゲームオーバー時やポーズ画面でメニューに戻る際に保存される</li>
                                         <li>v0.3.0より前のセーブデータとの互換性はない</li>
@@ -361,28 +409,36 @@ export default function GeometrioPage() {
                 <TypographyH3>開発</TypographyH3>
 
                 <TypographyP>
-                    <b>開発期間</b>: <Badge className="shadow-sm">– v0.2.1</Badge> 2025年9月6日 – 2025年11月9日、<Badge className="bg-blue-700 shadow-sm">開発中: v0.3.0 –</Badge> 2026年1月15日 –
+                    <b>開発期間</b>:<br />
+                    <BadgeForWorks mode="default">– v0.2.1</BadgeForWorks> 2025年9月6日 – 2025年11月9日<br />
+                    <BadgeForWorks mode="default">v0.3.0</BadgeForWorks> 2026年1月15日 – 2026年2月27日<br />
+                    <BadgeForWorks mode="developing">開発中: v0.4.0 –</BadgeForWorks> 2026年3月4日 –
                 </TypographyP>
 
                 <TypographyP>
-                    <b>使用言語</b>: C#, <Badge variant="outline" className="border-blue-700/50 shadow-sm">v0.3.0 –</Badge> TypeScript
+                    <b>使用言語</b>: C#, <BadgeForWorks mode="new">v0.3.0 –</BadgeForWorks> TypeScript
                 </TypographyP>
 
                 <TypographyP>
                     <b>使用ツール</b>:<br />Unity（ゲームエンジン）, Logic Pro（BGM, 効果音制作）, Git, Git LFS, Gemini Chat<br />
-                    <Badge variant="outline" className="border-blue-700/50 shadow-sm">v0.3.0 –</Badge> React Unity, React, Vite, Gemini Code Assist
+                    <BadgeForWorks mode="new">v0.3.0 –</BadgeForWorks> React Unity, React, Vite, Gemini Code Assist<br />
+                    <BadgeForWorks mode="new">v0.4.0 –</BadgeForWorks> Serverless Framework V4
                 </TypographyP>
 
                 <TypographyP>
-                    <b>使用サービス</b>: GitHub
+                    <b>使用サービス</b>:<br />
+                    GitHub<br />
+                    <BadgeForWorks mode="new">v0.4.0 –</BadgeForWorks> AWS Lambda, Amazon API Gateway, Amazon DynamoDB
                 </TypographyP>
 
                 <TypographyP>
                     <b>開発経緯・技術選定理由</b>:<br />
                     純粋なゲーム制作への興味から、Unityでのゲーム開発に挑戦しました。
                     Unityを選んだのは、C#の学習になると同時に、マルチプラットフォーム開発の経験が今後のゲーム以外のソフトウェア開発全般にも役立つと考えたためです。
-                    また、v0.3.0からは、ゲーム内のUIをReactで開発するためにReact Unityを導入しました。
+                    また、v0.3.0からはゲーム内のUIをReactで開発するためにReact Unityを導入しました。
                     これにより、ReactでのUI開発の経験を積むとともに、ゲーム開発においてもモダンなフロントエンド技術を活用する機会を得ています。
+                    さらに、v0.4.0からはAmazon API Gateway、AWS Lambda、Amazon DynamoDBを利用してクラウドセーブを実装しました。
+                    これにより、サーバーレス環境によるバックエンド構築とデータ管理の実践的な知見を得ました。
                 </TypographyP>
             </div>
         </div >

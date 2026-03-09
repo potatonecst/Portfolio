@@ -107,7 +107,7 @@ export function Header() {
                                         <TypographyH4>成果物一覧</TypographyH4>
                                     </Link>
                                 </NavigationMenuLink>
-                                <ul className="md:grid gap-2 sm:w-[400px] md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                                <ul className="md:grid gap-2 sm:w-100 md:w-125 md:grid-cols-2 lg:w-150">
                                     {works.map((work) => (
                                         <ListItem
                                             key={work.title}

@@ -9,6 +9,7 @@ import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/c
 import { CarouselItem } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { BadgeForWorks } from "@/components/ui/badgeForWorks";
 
 import { ExternalLink } from "lucide-react";
 
@@ -91,7 +92,9 @@ export default function PortfolioPage() {
                 <TypographyH3>開発</TypographyH3>
 
                 <TypographyP>
-                    <b>開発期間</b>: <Badge className="shadow-md">機能開発</Badge> 2025年11月1日 – 2025年12月16日、<Badge className="bg-blue-700 shadow-md">更新中</Badge> 2025年2月11日 –
+                    <b>開発期間</b>:<br />
+                    <BadgeForWorks mode="default">機能開発</BadgeForWorks> 2025年11月1日 – 2025年12月16日<br />
+                    <BadgeForWorks mode="developing">更新中</BadgeForWorks> 2025年2月11日 –
                 </TypographyP>
 
                 <TypographyP>
@@ -105,12 +108,13 @@ export default function PortfolioPage() {
                 <TypographyP>
                     <b>使用ツール</b>:<br />
                     npm, Git, Git LFS, OBS（動画収録）<br />
-                    <Badge variant="outline" className="border-blue-700/50 shadow-sm">2026/02/26 –</Badge> Final Cut Pro（動画編集）, Motion（動画編集）
+                    <BadgeForWorks mode="new">2026/02/26 –</BadgeForWorks> Final Cut Pro（動画編集）, Motion（動画編集）
                 </TypographyP>
 
                 <TypographyP>
-                    <b>使用サービス</b>: GitHub, AWS Amplify, Resend, さくらのメールボックス, Google Fonts<br />
-                    <Badge variant="outline" className="border-blue-700/50 shadow-sm">2026/02/27 –</Badge> YouTube
+                    <b>使用サービス</b>:<br />
+                    GitHub, AWS Amplify, Resend, さくらのメールボックス, Google Fonts<br />
+                    <BadgeForWorks mode="new">2026/02/27 –</BadgeForWorks> YouTube
                 </TypographyP>
 
                 <TypographyP>

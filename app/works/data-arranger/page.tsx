@@ -12,6 +12,7 @@ import { Badge } from "@/components/ui/badge";
 
 import { ExternalLink } from 'lucide-react';
 import YouTubeEmbed from "@/components/ui/youtube-embed";
+import { BadgeForWorks } from "@/components/ui/badgeForWorks";
 
 export default function DataArrangerPage() {
     return (
@@ -218,7 +219,7 @@ export default function DataArrangerPage() {
                 <TypographyH3>開発</TypographyH3>
 
                 <TypographyP>
-                    <b>開発期間</b>: <Badge className="shadow-md">運用中</Badge> 2025年7月20日 – 2025年11月17日
+                    <b>開発期間</b>: <BadgeForWorks>運用中</BadgeForWorks> 2025年11月17日 –
                 </TypographyP>
 
                 <TypographyP>
