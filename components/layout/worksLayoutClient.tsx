@@ -19,6 +19,7 @@ const worksLinks = [
     { href: PATHS.WORKS_DATA_ARRANGER, title: "DataArranger_web" },
     { href: PATHS.WORKS_GEOMETRIO, title: "GeomeTRIo" },
     { href: PATHS.WORKS_PORTFOLIO, title: "Portfolio" },
+    { href: PATHS.WORKS_NANOPOL, title: "NanoPol（開発中）" },
     { href: PATHS.WORKS_OTHERS, title: "Others" },
 ]
 
@@ -31,8 +32,6 @@ export default function WorksLayoutClient({
 }: {
     children: React.ReactNode;
 }) {
-    const [accordionValue, setAccordionValue] = React.useState("");
-
     //サイドバーのナビゲーション（共通）
     const SidebarNav = ({ className }: { className?: string }) => {
         const pathname = usePathname();

@@ -38,6 +38,11 @@ const works: { title: string, href: string, description: string }[] = [
         description: "このポートフォリオサイトの紹介です。"
     },
     {
+        title: "NanoPol（開発中）",
+        href: PATHS.WORKS_NANOPOL,
+        description: "実験の測定を自動化するデスクトップアプリケーションの紹介です。"
+    },
+    {
         title: "Others",
         href: PATHS.WORKS_OTHERS,
         description: "その他の成果物の紹介です。"

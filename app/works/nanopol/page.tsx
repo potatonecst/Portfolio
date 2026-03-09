@@ -77,75 +77,15 @@ export default function NanoPolPage() {
                 </ul>*/}
             </div>
 
-            {/*<div className="space-y-2">
+            <div className="space-y-2">
                 <TypographyH3>Gallery</TypographyH3>
                 <AutoplayCarousel className="mt-4">
                     <CarouselItem key="0" className="px-1 min-w-0">
                         <Card className="gap-0 py-0 shadow-none border-none rounded-none">
                             <CardContent className="w-full flex aspect-video items-center justify-center relative">
                                 <Image
-                                    src="/DataArrangerWeb_lineChart.png"
-                                    alt="シミュレーション結果解析用アプリケーションの画面です。光強度のグラフが表示されています。"
-                                    fill
-                                    className="object-cover"
-                                />
-                            </CardContent>
-                            <CardDescription className="p-2">
-                                アプリケーションの画面です。光強度のグラフが表示されています。
-                            </CardDescription>
-                        </Card>
-                    </CarouselItem>
-                    <CarouselItem key="1" className="px-1 min-w-0">
-                        <Card className="gap-0 py-0 shadow-none border-none rounded-none">
-                            <CardContent className="w-full flex aspect-video items-center justify-center relative">
-                                <Image
-                                    src="/DataArrangerWeb_poincareChart.png"
-                                    alt="シミュレーション結果解析用アプリケーションの画面です。3次元グラフが表示されています。"
-                                    fill
-                                    className="object-cover"
-                                />
-                            </CardContent>
-                            <CardDescription className="p-2">
-                                アプリケーションの画面です。偏光状態を示す3Dグラフが表示されています。
-                            </CardDescription>
-                        </Card>
-                    </CarouselItem>
-                    <CarouselItem key="2" className="px-1 min-w-0">
-                        <Card className="gap-0 py-0 shadow-none border-none rounded-none">
-                            <CardContent className="w-full flex aspect-video items-center justify-center relative">
-                                <Image
-                                    src="/DataArrangerWeb_top.png"
-                                    alt="シミュレーション結果解析用アプリケーションの画面です。アクセス直後の状態が表示されています。"
-                                    fill
-                                    className="object-cover"
-                                />
-                            </CardContent>
-                            <CardDescription className="p-2">
-                                アクセス直後のアプリケーションの画面です。
-                            </CardDescription>
-                        </Card>
-                    </CarouselItem>
-                    <CarouselItem key="3" className="px-1 min-w-0">
-                        <Card className="gap-0 py-0 shadow-none border-none rounded-none">
-                            <CardContent className="w-full flex aspect-video items-center justify-center relative">
-                                <Image
-                                    src="/DataArrangerWeb_settings.png"
-                                    alt="シミュレーション結果解析用アプリケーションの画面です。設定画面が表示されています。"
-                                    fill
-                                    className="object-cover"
-                                />
-                            </CardContent>
-                            <CardDescription className="p-2">
-                                アプリケーションの設定画面です。
-                            </CardDescription>
-                        </Card>
-                    </CarouselItem>
-                    <CarouselItem key="4" className="px-1 min-w-0">
-                        <Card className="gap-0 py-0 shadow-none border-none rounded-none">
-                            <CardContent className="w-full flex aspect-video items-center justify-center relative">
-                                <Image
-                                    src="/DataArrangerWeb_spLineChart.png"
-                                    alt="シミュレーション結果解析用アプリケーションのスマートフォンでの画面です。光強度のグラフが表示されています。"
+                                    src="/NanoPol/NanoPol_v0_1_device_connection_tooltip_demo_mock.png"
+                                    alt="アプリケーションを起動して最初に表示される画面のモックです。カメラやステッピングモーターで駆動するステージを接続するための画面です。Tooltipでアイコンの説明が表示されています。"
                                     width={0}
                                     height={0}
                                     sizes="100%"
@@ -153,12 +93,97 @@ export default function NanoPolPage() {
                                 />
                             </CardContent>
                             <CardDescription className="p-2">
-                                スマートフォンでのアプリケーションの画面です。光強度のグラフが表示されています。
+                                アプリケーションを起動して最初に表示される画面のモックです。カメラやステッピングモーターで駆動するステージを接続するための画面です。Tooltipでアイコンの説明が表示されています。
+                            </CardDescription>
+                        </Card>
+                    </CarouselItem>
+                    <CarouselItem key="1" className="px-1 min-w-0">
+                        <Card className="gap-0 py-0 shadow-none border-none rounded-none">
+                            <CardContent className="w-full flex aspect-video items-center justify-center relative">
+                                <Image
+                                    src="/NanoPol/NanoPol_v0_1_device_connection_connected_mock.png"
+                                    alt="カメラやステッピングモーターで駆動するステージが接続されている画面のモックです。"
+                                    width={0}
+                                    height={0}
+                                    sizes="100%"
+                                    className="object-cover h-full w-auto"
+                                />
+                            </CardContent>
+                            <CardDescription className="p-2">
+                                カメラやステッピングモーターで駆動するステージが接続されている画面のモックです。
+                            </CardDescription>
+                        </Card>
+                    </CarouselItem>
+                    <CarouselItem key="2" className="px-1 min-w-0">
+                        <Card className="gap-0 py-0 shadow-none border-none rounded-none">
+                            <CardContent className="w-full flex aspect-video items-center justify-center relative">
+                                <Image
+                                    src="/NanoPol/NanoPol_v0_1_manual_control_mock.png"
+                                    alt="手動で測定装置を操作する画面のモックです。左側で装置を操作し、右側にカメラの画像が映し出される予定です。"
+                                    width={0}
+                                    height={0}
+                                    sizes="100%"
+                                    className="object-cover h-full w-auto"
+                                />
+                            </CardContent>
+                            <CardDescription className="p-2">
+                                手動で測定装置を操作する画面のモックです。左側で装置を操作し、右側にカメラの画像が映し出される予定です。
+                            </CardDescription>
+                        </Card>
+                    </CarouselItem>
+                    <CarouselItem key="3" className="px-1 min-w-0">
+                        <Card className="gap-0 py-0 shadow-none border-none rounded-none">
+                            <CardContent className="w-full flex aspect-video items-center justify-center relative">
+                                <Image
+                                    src="/NanoPol/NanoPol_v0_1_manual_control_log_medium_mock.png"
+                                    alt="手動で測定装置を操作する画面のモックです。装置を操作すると、上部にToastが表示されます。ログが下側に表示されています。この画像から、ライトモードになっています。"
+                                    width={0}
+                                    height={0}
+                                    sizes="100%"
+                                    className="object-cover h-full w-auto"
+                                />
+                            </CardContent>
+                            <CardDescription className="p-2">
+                                手動で測定装置を操作する画面のモックです。装置を操作すると、上部にToastが表示されます。ログが下側に表示されています。この画像から、ライトモードになっています。
+                            </CardDescription>
+                        </Card>
+                    </CarouselItem>
+                    <CarouselItem key="4" className="px-1 min-w-0">
+                        <Card className="gap-0 py-0 shadow-none border-none rounded-none">
+                            <CardContent className="w-full flex aspect-video items-center justify-center relative">
+                                <Image
+                                    src="/NanoPol/NanoPol_v0_1_manual_control_log_max_mock.png"
+                                    alt="手動で測定装置を操作する画面のモックです。最大化されたログが表示されています。ログは、内容によって色分けされています。"
+                                    width={0}
+                                    height={0}
+                                    sizes="100%"
+                                    className="object-cover h-full w-auto"
+                                />
+                            </CardContent>
+                            <CardDescription className="p-2">
+                                手動で測定装置を操作する画面のモックです。最大化されたログが表示されています。ログは、内容によって色分けされています。
+                            </CardDescription>
+                        </Card>
+                    </CarouselItem>
+                    <CarouselItem key="5" className="px-1 min-w-0">
+                        <Card className="gap-0 py-0 shadow-none border-none rounded-none">
+                            <CardContent className="w-full flex aspect-video items-center justify-center relative">
+                                <Image
+                                    src="/NanoPol/NanoPol_v0_1_settings_mock.png"
+                                    alt="設定画面のモックです。"
+                                    width={0}
+                                    height={0}
+                                    sizes="100%"
+                                    className="object-cover h-full w-auto"
+                                />
+                            </CardContent>
+                            <CardDescription className="p-2">
+                                設定画面のモックです。
                             </CardDescription>
                         </Card>
                     </CarouselItem>
                 </AutoplayCarousel>
-            </div>*/}
+            </div>
 
             {/*<div className="space-y-2">
                 <TypographyH3>Movie</TypographyH3>
@@ -178,7 +203,7 @@ export default function NanoPolPage() {
                 <TypographyH3>開発</TypographyH3>
 
                 <TypographyP>
-                    <b>開発期間</b>: <Badge>開発中</Badge> 2025年12月4日 –
+                    <b>開発期間</b>: <Badge className="shadow-sm">開発中</Badge> 2025年12月4日 –
                 </TypographyP>
 
                 <TypographyP>

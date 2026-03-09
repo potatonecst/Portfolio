@@ -10,5 +10,6 @@ export const PATHS = {
     WORKS_DATA_ARRANGER: "/works/data-arranger",
     WORKS_GEOMETRIO: "/works/geometrio",
     WORKS_PORTFOLIO: "/works/portfolio",
+    WORKS_NANOPOL: "/works/nanopol",
     WORKS_OTHERS: "/works/others",
 }

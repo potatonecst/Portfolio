@@ -89,6 +89,33 @@ export default function WorksPage() {
                 </li>
                 <li>
                     <Link
+                        href={PATHS.WORKS_NANOPOL}
+                        className="hover:opacity-60"
+                    >
+                        <Card className="gap-0 py-0">
+                            <CardContent className="flex aspect-video items-center justify-center relative">
+                                <Image
+                                    src="/NanoPol/NanoPol_v0_1_manual_control_mock.png"
+                                    alt="実験の測定を自動化するデスクトップアプリケーションのMock画面です。"
+                                    width={0}
+                                    height={0}
+                                    sizes="100%"
+                                    className="object-cover h-full w-auto"
+                                />
+                            </CardContent>
+                            <div className="p-2">
+                                <CardTitle>
+                                    <TypographyH4>NanoPol（開発中）</TypographyH4>
+                                </CardTitle>
+                                <CardDescription>
+                                    現在開発中の、実験の測定を自動化するデスクトップアプリケーションの紹介です。
+                                </CardDescription>
+                            </div>
+                        </Card>
+                    </Link>
+                </li>
+                <li>
+                    <Link
                         href={PATHS.WORKS_OTHERS}
                         className="hover:opacity-60"
                     >
