@@ -15,7 +15,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { ExternalLink } from "lucide-react";
 import YouTubeEmbed from "@/components/ui/youtube-embed";
 
-const currentVersion = "0.3.0"
+const currentVersion = "0.4.1"
 
 const galleryItems_0_3_0 = [
     {
@@ -147,11 +147,11 @@ export default function GeometrioPage() {
                     <Accordion
                         type="single"
                         collapsible
-                        defaultValue="v0.4.0"
+                        defaultValue="v0.4.1"
                         className="rounded-lg border"
                     >
-                        <AccordionItem value="v0.4.0" className="px-4">
-                            <AccordionTrigger className="text-lg">Version 0.4.0時点</AccordionTrigger>
+                        <AccordionItem value="v0.4.1" className="px-4">
+                            <AccordionTrigger className="text-lg">Version 0.4.1時点</AccordionTrigger>
                             <AccordionContent>
                                 <ul className="ml-6 list-disc [&>li]:mt-2 text-base">
                                     <li>正三角形の前方、左斜め後方、右斜め後方の3箇所の頂点が弾の発射口</li>
@@ -163,6 +163,7 @@ export default function GeometrioPage() {
                                     <ul className="ml-5 list-[circle] [&>li]:mt-2">
                                         <li><BadgeForWorks mode="old">v0.3.0 –</BadgeForWorks> スピンアタック時の弾は、敵へのダメージ量が増加が増加する</li>
                                         <li><BadgeForWorks mode="old">v0.3.0 –</BadgeForWorks> スピンアタック時に画面内の敵の弾を一掃する</li>
+                                        <li><BadgeForWorks mode="new">v0.4.1 –</BadgeForWorks> 敵の弾だけでなく、ジャミング機雷も同時に一掃する</li>
                                     </ul>
                                     <li>HPは1から10、SPは0から10の間で設定可能（HPの初期値は3、SPの初期値は2）</li>
                                     <ul className="ml-5 list-[circle] [&>li]:mt-2">

@@ -213,6 +213,16 @@ export default function DataArrangerPage() {
                     映像は、Render.com版のものですので、サーバーが起動するまで時間がかかっています。1:16で起動が完了します。<br />
                     ※音声はありません。
                 </TypographyP>
+
+                <YouTubeEmbed
+                    videoId="y2EiEx4oCFg"
+                    title="【比較】DataArranger_Web（Render.com版とAWS版）"
+                    className="mt-8"
+                />
+                <TypographyP>
+                    Render.com版とAWS版の起動時の比較映像です。<br />
+                    Render.com版はスリープ状態からの起動です。AWS版はスリープ状態になりません。
+                </TypographyP>
             </div>
 
             <div>
